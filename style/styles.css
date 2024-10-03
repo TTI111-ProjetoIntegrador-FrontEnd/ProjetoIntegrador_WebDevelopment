@@ -20,19 +20,16 @@ footer{
     height: 5%;
 }
 
-.quadrado-central{
+.div_central{
     background: blue;
-    width: 50vw;
-    height: 50vw;
+    width: 70vw;
+    height: 25vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.quadrado-central h1{
+.div_central h1{
     color: #000;
-}
-
-main{
-    flex:1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
