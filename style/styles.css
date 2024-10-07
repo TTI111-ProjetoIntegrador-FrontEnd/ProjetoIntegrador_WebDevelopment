@@ -1,5 +1,7 @@
 :root{
---cor-divcentral:rgb(68, 68, 206);   
+--cor-divcentral:rgb(68, 68, 206);
+--cor-branco: white;
+--cor-cinza: grey;
 }
 
 
@@ -8,8 +10,8 @@ header{
     width: 100%;
     top: 0;
     left: 0;
-    background-color: grey;
-    color: white;
+    background-color: var(--cor-cinza);
+    color: var(--cor-branco);
     padding: 1em;
 }
 
@@ -19,7 +21,7 @@ footer{
     bottom: 0;
     left: 0;
     background-color: grey;
-    color: white;
+    color: var(--cor-branco);
     padding: 1em;
     height: 5%;
 }
@@ -32,6 +34,7 @@ footer{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .div_central h1{
