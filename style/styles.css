@@ -1,53 +1,35 @@
-:root{
---cor-divcentral:rgb(68, 68, 206);
+ :root{
+/* --cor-divcentral:rgb(68, 68, 206);
 --cor-branco: white;
---cor-cinza: grey;
+--cor-cinza: grey; */
 --cor-hover: rgb(138, 136, 136);
+} 
+
+main {
+    background-color: rgb(50, 50, 169);
 }
 
-body {
-    margin: 0;
-}
 
-
-header{
-    position:fixed;
-    justify-content: space-between;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: var(--cor-cinza);
-    color: var(--cor-branco);
-    padding: 1em;
-}
-
-.nav-bar {
+#nav-bar {
     display: flex;
-    align-items: center;
-    margin-left: 0;
-}
-
-#img-metro {
-    width: 60px;
-    height: 60px;
+    background-color: #d9d9d9;
+    width: 100%;
+    border-bottom: 2px solid gray;
 }
 
 .navegacao {
     color: #000;
-    border-radius: 8px;
-    font-size: 1.5rem;
+    border-radius: 7px;
+    font-size: 1.75rem;
     padding: 0.3% 3% 0.8% 3%;
-    margin: 10px;
     text-decoration: none;
-    /* color: rgba(16, 81, 167, 0.918); */
 }
 
 .navegacao:hover {
     background-color: var(--cor-hover);
 }
 
-.div_central{
-    background: var(--cor-divcentral);
+ .div_central{
     width: 70vw;
     height: 25vw;
     position: absolute;
@@ -55,9 +37,9 @@ header{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-}
+} 
 
-.div_central h1{
+ .div_central h1{
     color: #000;
     font-family:Impact, 'Arial Narrow Bold', sans-serif;
 }
@@ -65,15 +47,26 @@ header{
 .div_central h3 {
     color: #000;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif  ;
-}
+} 
 
 footer{
-    position:fixed;
+    position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: grey;
-    color: var(--cor-branco);
-    padding: 1em;
-    height: 5%;
+    background-color: #d9d9d9;
+    padding-top: 10px;
+    border-top: 2px solid grey;
+}
+
+#rodape {
+    text-align: center; 
+    padding: 20px; 
+    color: black;
+}
+
+#rodape img {
+    width: 100px; 
+    height: auto; 
+    margin: 5px 40px; 
 }
