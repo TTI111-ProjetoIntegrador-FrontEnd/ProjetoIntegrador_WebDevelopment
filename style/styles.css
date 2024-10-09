@@ -2,16 +2,48 @@
 --cor-divcentral:rgb(68, 68, 206);
 --cor-branco: white;
 --cor-cinza: grey;
+--cor-hover: rgb(138, 136, 136);
 }
+
+body {
+    margin: 0;
+}
+
 
 header{
     position:fixed;
+    justify-content: space-between;
     width: 100%;
     top: 0;
     left: 0;
     background-color: var(--cor-cinza);
     color: var(--cor-branco);
     padding: 1em;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+#img-metro {
+    width: 60px;
+    height: 60px;
+}
+
+.navegacao {
+    color: #000;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 0.3% 3% 0.8% 3%;
+    margin: 10px;
+    text-decoration: none;
+    /* color: rgba(16, 81, 167, 0.918); */
+}
+
+.navegacao:hover {
+    background-color: var(--cor-hover);
 }
 
 .div_central{
