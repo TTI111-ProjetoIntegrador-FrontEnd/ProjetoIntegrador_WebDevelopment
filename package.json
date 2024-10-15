@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "name": "projetointegrador_webdevelopment",
+  "description": "Matemática no Metrô\r Projeto Integrador Interdisciplinar dos cursos de Sistemas da Informação, Ciência da Computação, Ciência de Dados e Inteligência Artificial, parceria com o Projeto Matemática no Metrô. Instituto Mauá de Tecnologia (IMT) - T08 - Segundo Semestre",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
