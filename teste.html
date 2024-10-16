@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <style>
+        :root {
+            --cor-hover: rgb(138, 136, 136);
+        } 
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+            
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Garante que o main ocupe 100% da altura da viewport */
+        }
+        
+        #nav-bar {
+            display: flex;
+            background-color: #d9d9d9;
+            width: 100%;
+            border-bottom: 2px solid gray;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        
+        .navegacao {
+            color: #000;
+            border-radius: 6px;
+            font-size: 1.75rem;
+            padding: 0.3% 3% 0.8% 3%;
+            text-decoration: none;
+        }
+        
+        .navegacao:hover {
+            background-color: var(--cor-hover);
+        }
+        
+        .section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white; /* Cor do texto */
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.5rem;
+        }
+        
+        .bg1 {
+            background-color: #001585; 
+            height: 100vh;
+        }
+
+        .section .bg1 h1{
+            position:absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .section .bg1 p{
+            text-justify: auto;
+            text-align: center;
+        }
+        
+        .bg2 {
+            background-color: #FFFFFF;
+            height: 100vh;
+            color: black;
+        }
+        
+        .bg3 {
+            background-color: #4F6AFF; 
+            height: 100vh;
+        }
+        
+        .bg4 {
+            background-color: #001585;
+            height: 100vh;
+        }
+
+        footer {
+            background-color: #d9d9d9;
+            padding: 5px 0;
+            border-top: 2px solid grey;
+            font-size: 0.9rem;
+        }
+        
+        #rodape {
+            text-align: center; 
+            padding: 10px;
+            color: black;
+        }
+        
+        #rodape img {
+            width: 100px; 
+            height: auto; 
+            margin: 5px 40px; 
+        }
+    </style>
+
+</head>
+
+<body onload="initMap()">
+    <header id="header">
+        <nav id="nav-bar">
+            <img id="img-metro" src="assets/Matemática no Metrô 1.png" alt="logo_simples" width="140px">
+            <a class="navegacao" href="index.html">Principal</a>
+            <a class="navegacao" href="">Saiba Mais</a>
+            <a class="navegacao" href="quemsomos.html">Mapa</a>
+            <a class="navegacao" href="">Contato</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="section bg1">
+            <h1>Bem-vindo ao Matemática no Metrô</h1>
+            <p>Nós somos um projeto realizado na estação do metrô Sacomã, em São Paulo, e visamos sanar as dúvidas em matemática dos usuários que frequentam esse meio de transporte. Independente da idade, nossos membros são preparados para auxiliar o público com seus problemas matemáticos.</p>
+            <p>Clique em 'Saiba Mais' para conhecer melhor a iniciativa</p>    
+
+            <button>Saiba Mais</button>
+        </div>
+        <div class="section bg2">
+            <h1>Sobre Nós</h1>
+            <p>Informações sobre a equipe e a missão.</p>
+        </div>
+        <div class="section bg3">
+            <h1>Mapa até a Estação Sacomã</h1>
+            <div id="map" style="height: 500px; width: 100%;"></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0886851798905!2d-46.60500242511699!3d-23.601152163054476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b8e2bf67729%3A0xa60a4690a8cab7d2!2zU2Fjb23Dow!5e0!3m2!1spt-BR!2sbr!4v1728480422829!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        <div class="section bg4">
+            <h1>Contato</h1>
+            <p>Informações para entrar em contato.</p>
+        </div>
+    </main>
+    <footer id="rodape">
+        <h2>Todos os Direitos Reservados</h2>
+        <h3>Patrocinadores:</h3>
+        <img id="logo-imt" src="assets/logo-IMT 1.png">
+        <img id="logo-sp" src="assets/logoSP.png">
+    </footer>
+
+</body>
+<script>
+    function initMap() {
+      var mapOptions = {
+        center: { lat: -23.601152, lng: -46.605002 },
+        zoom: 14
+      };
+      var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    }
+  </script>
+
+</html>
