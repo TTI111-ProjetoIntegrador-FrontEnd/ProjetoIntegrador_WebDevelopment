@@ -1,1 +1,9 @@
 https://www.comunicacao.sp.gov.br/identidade-visual/
+
+O que fazer:
+1- Fazer o header
+2- Fazer o footer
+3- Alinhar os textos
+4- Colocar as imagens
+5- 
+
