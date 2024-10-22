@@ -17,14 +17,12 @@
         body {
             height: 100%;
             margin: 0;
-
         }
 
         main {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            /* Garante que o main ocupe 100% da altura da viewport */
         }
 
         #nav-bar {
@@ -34,6 +32,7 @@
             border-bottom: 2px solid gray;
             justify-content: space-between;
             padding: 10px;
+            position: fixed;
         }
 
         .navegacao {
@@ -51,10 +50,10 @@
         .section {
             width: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             color: white;
-            /* Cor do texto */
             font-family: "Montserrat", sans-serif;
             font-size: 1.5rem;
         }
@@ -64,21 +63,41 @@
             height: 100vh;
         }
 
-        .section .bg1 h1 {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-        }
-
-        .section .bg1 p {
-            text-justify: auto;
-            text-align: center;
-        }
-
         .bg2 {
             background-color: #FFFFFF;
             height: 100vh;
             color: black;
+            padding: 20px;
+        }
+
+        .quadrados {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .quadrado {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            width: 30%;
+            min-height: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+        }
+
+        .imagem-redonda {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+
+        .imagem-redonda img {
+            width: 100%;
+            height: auto;
         }
 
         .bg3 {
@@ -110,13 +129,12 @@
             margin: 5px 40px;
         }
     </style>
-
 </head>
 
 <body onload="initMap()">
     <header id="header">
         <nav id="nav-bar">
-            <img id="img-metro" src="assets/Matemática no Metrô 1.png" alt="logo_simples" width="140px">
+            <img id="img-metro" src="assets/logoMatematicaMetro.png" alt="logo_simples" width="140px">
             <a class="navegacao" href="#principal">Principal</a>
             <a class="navegacao" href="#saibamais">Saiba Mais</a>
             <a class="navegacao" href="#mapa">Mapa</a>
@@ -131,12 +149,31 @@
                 matemática dos usuários que frequentam esse meio de transporte. Independente da idade, nossos membros
                 são preparados para auxiliar o público com seus problemas matemáticos.</p>
             <p>Clique em 'Saiba Mais' para conhecer melhor a iniciativa</p>
-
-            <button>Saiba Mais</button>
+            <a href="#saibamais">
+                <button>Saiba Mais</button>
+            </a>
         </div>
         <div class="section bg2" id="saibamais">
-            <h1>Sobre Nós</h1>
-            <p>Informações sobre a equipe e a missão.</p>
+            <div class="quadrados">
+                <div class="quadrado">
+                    <div class="imagem-redonda">
+                        <img src="ney.png" alt="Descrição da imagem 1">
+                    </div>
+                    <a href="link1.html">Tudo Sobre Nós</a>
+                </div>
+                <div class="quadrado">
+                    <div class="imagem-redonda">
+                        <img src="ronaldinhp.png" alt="Descrição da imagem 2">
+                    </div>
+                    <a href="link2.html">Jogar MatMetro</a>
+                </div>
+                <div class="quadrado">
+                    <div class="imagem-redonda">
+                        <img src="cr7.png" alt="Descrição da imagem 3">
+                    </div>
+                    <a href="link3.html">Nossos Membros</a>
+                </div>
+            </div>
         </div>
         <div class="section bg3" id="mapa">
             <h1>Mapa até a Estação Sacomã</h1>
@@ -158,15 +195,15 @@
         <img id="logo-sp" src="assets/logoSP.png">
     </footer>
 
+    <script>
+        function initMap() {
+            var mapOptions = {
+                center: { lat: -23.601152, lng: -46.605002 },
+                zoom: 14
+            };
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        }
+    </script>
 </body>
-<script>
-    function initMap() {
-        var mapOptions = {
-            center: { lat: -23.601152, lng: -46.605002 },
-            zoom: 14
-        };
-        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-    }
-</script>
 
 </html>
