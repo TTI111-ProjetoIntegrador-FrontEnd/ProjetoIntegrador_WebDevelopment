@@ -1,3 +1,41 @@
 #img-metro {
-    height: 70px;
+    height: 50px;
+}
+
+.navegacao {
+    color: #000;
+    border-radius: 6px;
+    font-size: 1.75rem;
+    padding: 0.3% 3% 0.8% 3%;
+    text-decoration: none;
+}
+
+.quadrados {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.quadrado {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    width: 30%;
+    min-height: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+.imagem-redonda {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.imagem-redonda img {
+    width: 100%;
+    height: auto;
 }

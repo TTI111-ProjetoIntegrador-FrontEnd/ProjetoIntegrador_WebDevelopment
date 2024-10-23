@@ -13,19 +13,20 @@
     <body>
         <header id="header">
             <nav class="row mb-5">
-                <div  style= "background: #d9d9d9" class="col-md-6 justify-content-start">
+                <div  style= "background: #d9d9d9" class="col-md-4 justify-content-start">
                     <img id="img-metro" src="assets/logoMatematicaMetro.png" alt="logo_simples">
                 </div>
-                <div style= "background: #d9d9d9" id="menu" class="col-md-6 border justify-content-end">
-                    <a class="navegacao" href="index.html">Principal</a>
-                    <a class="navegacao" href="quemsomos.html">Saiba mais</a>
-                    <a class="navegacao" href="">Mapa</a>
-                    <a class="navegacao" href="">Contato</a>
+                <div style= "background: #d9d9d9" id="menu" class="col-md-8 justify-content-end text-center">
+                    <a class="navegacao" href="#principal">Principal</a>
+                    <a class="navegacao" href="#saibamais">Saiba mais</a>
+                    <a class="navegacao" href="#mapa">Mapa</a>
+                    <a class="navegacao" href="#contato">Contato</a>
+                    <a class="navegacao" onclick="">Login</a>
                 </div>
             </nav>
         </header>
         <main>
-            <div style= "background: #001585; color:white" class="row">
+            <div id= "principal" style= "background: #001585; color:white" class="row">
                 <div class="row">
                     <div class="col-md-7 ">
                         <h1>Bem-vindo ao Matemática no Metrô</h1>
@@ -40,26 +41,35 @@
                     <button class="btn btn-outline-primary w-50 bg-light " onClick=""> Saiba Mais + </button>
                 </div>
             </div>
-            <div style= "background: #FFFFFF" class="row ">
-                <div class="col-sm-4 ">
-                    <img src="assets/tudoSobreNos.png">
-                    <button class="justify-content-center">Tudo Sobre Nós</button>
-                </div>
-                <div class="col-sm-4">
-                    <img src="assets/jogarMatMetro.png">
-                    <button class="justify-content-center">Jogar MatMetro</button>
-                </div>
-                <div class="col-sm-4">
-                    <img src="assets/nossoMembros.png">
-                    <button class="justify-content-center">Nosso Membros</button>
+            <div id="saibamais" style= "background: #FFFFFF" class="row ">
+                <div class="quadrados">
+                    <div class="quadrado">
+                        <div class="imagem-redonda">
+                            <img src="assets/tudoSobreNos.png">
+                        </div>
+                        <a href="tudoSobreNois.hmtl">Tudo Sobre Nós</a>
+                    </div>
+                    <div class="quadrado">
+                        <div class="imagem-redonda">
+                            <img src="assets/jogarMatMetro.png">
+                        </div>
+                        <a href="jogarMatMetro.html">Jogar MatMetro</a>
+                    </div>
+                    <div class="quadrado">
+                        <div class="imagem-redonda">
+                            <img src="assets/nossoMembros.png" alt="Descrição da imagem 3">
+                        </div>
+                        <a href="nossoMembros.html">Nossos Membros</a>
+                    </div>
                 </div>
             </div>
-            <div style= "background: #4F6AFF; color:white" id="tela_mapa" class="row justify-content-center">
+            <div id="mapa" style= "background: #4F6AFF; color:white" id="tela_mapa" class="row justify-content-center">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.7827508326413!2d-46.57681992591791!3d-23.647950064776655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce434992a4cad7%3A0x75aa65b7b5099c2!2sMaua%20Institute%20of%20Technology!5e0!3m2!1sen!2sbr!4v1728900231727!5m2!1sen!2sbr"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade" class="col-8 justify-content-center"></iframe>
             </div>
+            <div id="contato" class="row">TESTE</div>
         </main>
         <footer style= "background: #d9d9d9" id="rodape" class="row m-5">
             <div class="text-center">
