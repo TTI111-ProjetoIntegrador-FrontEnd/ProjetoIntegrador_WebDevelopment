@@ -23,6 +23,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            padding-top: 70px; /* Espaço para o header fixo */
         }
 
         #nav-bar {
@@ -33,6 +34,8 @@
             justify-content: space-between;
             padding: 10px;
             position: fixed;
+            top: 0; /* Garante que o navbar fique no topo */
+            z-index: 1000; /* Coloca o navbar acima de outros elementos */
         }
 
         .navegacao {
@@ -52,47 +55,57 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             color: white;
             font-family: "Montserrat", sans-serif;
             font-size: 1.5rem;
+            min-height: 100vh;
         }
 
         .bg1 {
             background-color: #001585;
-            height: 100vh;
         }
 
         .bg2 {
             background-color: #FFFFFF;
-            height: 100vh;
             color: black;
             padding: 20px;
         }
 
         .quadrados {
             display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 40px;
         }
 
         .quadrado {
             background-color: #f0f0f0;
             border-radius: 10px;
-            padding: 40px;
+            padding: 20px;
             text-align: center;
-            width: 30%;
-            min-height: 300px;
+            width: 300px;
+            min-height: 400px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             margin: 20px;
+            transition: transform 0.2s;
+            position: relative;
+            z-index: 1;
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Mantém a cor do texto */
+        }
+
+        .quadrado:hover {
+            transform: scale(1.05);
         }
 
         .imagem-redonda {
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             overflow: hidden;
-            margin: 20px auto;
+            margin: 0 auto 130px; /* Ajustei a margem inferior */
         }
 
         .imagem-redonda img {
@@ -100,14 +113,18 @@
             height: auto;
         }
 
+        .quadrado span {
+            margin-top: 10px; /* Espaço entre a imagem e o texto */
+            font-weight: bold;
+            text-align: center;
+        }
+
         .bg3 {
             background-color: #4F6AFF;
-            height: 100vh;
         }
 
         .bg4 {
             background-color: #001585;
-            height: 100vh;
         }
 
         footer {
@@ -155,24 +172,24 @@
         </div>
         <div class="section bg2" id="saibamais">
             <div class="quadrados">
-                <div class="quadrado">
+                <a class="quadrado" href="link1.html">
                     <div class="imagem-redonda">
-                        <img src="ney.png" alt="Descrição da imagem 1">
+                        <img src="cr7.png" alt="Descrição da imagem 1">
                     </div>
-                    <a href="link1.html">Tudo Sobre Nós</a>
-                </div>
-                <div class="quadrado">
+                    <span>Tudo Sobre Nós</span>
+                </a>
+                <a class="quadrado" href="link2.html">
                     <div class="imagem-redonda">
-                        <img src="ronaldinhp.png" alt="Descrição da imagem 2">
+                        <img src="ney.png" alt="Descrição da imagem 2">
                     </div>
-                    <a href="link2.html">Jogar MatMetro</a>
-                </div>
-                <div class="quadrado">
+                    <span>Jogar MatMetro</span>
+                </a>
+                <a class="quadrado" href="link3.html">
                     <div class="imagem-redonda">
-                        <img src="cr7.png" alt="Descrição da imagem 3">
+                        <img src="ronaldinhp.png" alt="Descrição da imagem 3">
                     </div>
-                    <a href="link3.html">Nossos Membros</a>
-                </div>
+                    <span>Nossos Membros</span>
+                </a>
             </div>
         </div>
         <div class="section bg3" id="mapa">
