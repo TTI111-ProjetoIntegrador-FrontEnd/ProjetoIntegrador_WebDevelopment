@@ -12,30 +12,57 @@
 
 .quadrados {
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 .quadrado {
-    background-color: #f0f0f0;
+    background-color: #e4dfdf;
     border-radius: 10px;
-    padding: 40px;
+    padding: 20px;
     text-align: center;
-    width: 30%;
-    min-height: 300px;
+    width: 300px;
+    min-height: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 20px;
+    transition: transform 0.2s;
+    position: relative;
+    z-index: 1;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Mantém a cor do texto */
+}
+
+.quadrado:hover {
+    transform: scale(1.05);
 }
 
 .imagem-redonda {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 20px auto;
+    margin: 0 auto 130px; /* Ajustei a margem inferior */
 }
 
 .imagem-redonda img {
     width: 100%;
     height: auto;
+}
+
+.quadrado span {
+    margin-top: 10px; /* Espaço entre a imagem e o texto */
+    font-weight: bold;
+    text-align: center;
+}
+
+#quadrados_saibamais{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+input, label{
+    display:block;
 }
