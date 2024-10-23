@@ -5,17 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Página Principal</title>
         <link rel="icon" type="image/x-icon" href="assets/minimetro.jpeg">
-        <link rel="stylesheet" href="style/styles.css">
+        <link rel="stylesheet" href="Styles/styles.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        
     </head>
     <body>
         <header id="header">
             <nav class="row mb-5">
-                <div class="col-md-6 justify-content-start">
+                <div  style= "background: #d9d9d9" class="col-md-6 justify-content-start">
                     <img id="img-metro" src="assets/logoMatematicaMetro.png" alt="logo_simples">
                 </div>
-                <div id="menu" class="col-md-6 border justify-content-end">
+                <div style= "background: #d9d9d9" id="menu" class="col-md-6 border justify-content-end">
                     <a class="navegacao" href="index.html">Principal</a>
                     <a class="navegacao" href="quemsomos.html">Saiba mais</a>
                     <a class="navegacao" href="">Mapa</a>
@@ -24,32 +25,46 @@
             </nav>
         </header>
         <main>
-            <div class="row m-5">
+            <div style= "background: #001585; color:white" class="row">
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-7 ">
                         <h1>Bem-vindo ao Matemática no Metrô</h1>
                         <p>Nós somos um projeto realizado na estação do metrô Sacomã, em São Paulo, e visamos sanar as dúvidas em matemática dos usuários que frequentam esse meio de transporte. Independente da idade, nossos membros são preparados para auxiliar o público com seus problemas matemáticos.</p>
-                        <p>Clique em ‘Saiba Mais’ para conhecer melhor a iniciativa </p>
+                        <p>Clique em 'Saiba Mais' para conhecer melhor a iniciativa </p>
                     </div>
                     <div class="col-md-5 text-center">
                         <img style="width: 100%;" src="assets/mascaraImagem.png" alt="mascara_imagem">
                     </div>
                 </div>
-                <div class="row">
-                    <button class="btn btn-outline-primary w-50" onClick=""> Saiba Mais + </button>
+                <div class="row mb-5">
+                    <button class="btn btn-outline-primary w-50 bg-light " onClick=""> Saiba Mais + </button>
                 </div>
             </div>
-            <div id="tela_mapa" class="row justify-content-center m-5">
+            <div style= "background: #FFFFFF" class="row ">
+                <div class="col-sm-4 ">
+                    <img src="assets/tudoSobreNos.png">
+                    <button class="justify-content-center">Tudo Sobre Nós</button>
+                </div>
+                <div class="col-sm-4">
+                    <img src="assets/jogarMatMetro.png">
+                    <button class="justify-content-center">Jogar MatMetro</button>
+                </div>
+                <div class="col-sm-4">
+                    <img src="assets/nossoMembros.png">
+                    <button class="justify-content-center">Nosso Membros</button>
+                </div>
+            </div>
+            <div style= "background: #4F6AFF; color:white" id="tela_mapa" class="row justify-content-center">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.7827508326413!2d-46.57681992591791!3d-23.647950064776655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce434992a4cad7%3A0x75aa65b7b5099c2!2sMaua%20Institute%20of%20Technology!5e0!3m2!1sen!2sbr!4v1728900231727!5m2!1sen!2sbr"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade" class="col-8 justify-content-center"></iframe>
             </div>
         </main>
-        <footer id="rodape" class="row m-5">
+        <footer style= "background: #d9d9d9" id="rodape" class="row m-5">
             <div class="text-center">
                 <h5>Todos os Direitos Reservados</h5>
-                <h3>Patrocinadores:</h3>
+                <h3>Colaboradores:</h3>
             </div>
             <div class="text-center p-5">
                 <img id="logo-imt" style="width: 25%;" src="assets/logo-IMT 1.png" class="col-sm-6">
