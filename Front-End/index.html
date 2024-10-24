@@ -1,103 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Página Principal</title>
-        <link rel="icon" type="image/x-icon" href="assets/minimetro.jpeg">
-        <link rel="stylesheet" href="Styles/styles.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        
-    </head>
-    <body>
-        <header id="header">
-            <nav class="row mb-5">
-                <div  style= "background: #d9d9d9" class="col-md-4 justify-content-start">
-                    <img id="img-metro" src="assets/logoMatematicaMetro.png" alt="logo_simples">
-                </div>
-                <div style= "background: #d9d9d9" id="menu" class="col-md-8 justify-content-end text-center">
-                    <a class="navegacao" href="#principal">Principal</a>
-                    <a class="navegacao" href="#saibamais">Saiba mais</a>
-                    <a class="navegacao" href="#mapa">Mapa</a>
-                    <a class="navegacao" href="#contato">Contato</a>
-                    <a class="navegacao" onclick="">Login</a>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div id= "principal" style= "background: #001585; color:white" class="row">
-                <div class="row">
-                    <div class="col-md-7 ">
-                        <h1>Bem-vindo ao Matemática no Metrô</h1>
-                        <p>Nós somos um projeto realizado na estação do metrô Sacomã, em São Paulo, e visamos sanar as dúvidas em matemática dos usuários que frequentam esse meio de transporte. Independente da idade, nossos membros são preparados para auxiliar o público com seus problemas matemáticos.</p>
-                        <p>Clique em 'Saiba Mais' para conhecer melhor a iniciativa </p>
-                    </div>
-                    <div class="col-md-5 text-center">
-                        <img style="width: 100%;" src="assets/mascaraImagem.png" alt="mascara_imagem">
-                    </div>
-                </div>
-                <div class="row mb-5">
-                    <button class="btn btn-outline-primary w-50 bg-light " onClick=""> Saiba Mais + </button>
-                </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="icon" type="image/x-icon" href="assets/minimetro.jpeg">
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header id="header">
+        <nav class="row mb-5">
+            <div style="background: #d9d9d9" class="col-md-4 justify-content-start">
+                <img id="img-metro" src="assets/logoMatematicaMetro.png" alt="logo_simples">
             </div>
-            <div id="saibamais" style= "background: #FFFFFF" class="row ">
-                <div class="quadrados">
-                    <div class="quadrado">
-                        <div class="imagem-redonda">
-                            <img src="assets/tudoSobreNos.png">
-                        </div>
-                        <a id="quadrados_saibamais" href="tudoSobreNois.hmtl">TUDO SOBRE NÓIS</a>
-                    </div>
-                    <div class="quadrado">
-                        <div class="imagem-redonda">
-                            <img src="assets/jogarMatMetro.png">
-                        </div>
-                        <a id="quadrados_saibamais" href="jogarMatMetro.html">JOGAR MATMETRÔ</a>
-                    </div>
-                    <div class="quadrado">
-                        <div class="imagem-redonda">
-                            <img src="assets/nossoMembros.png" alt="Descrição da imagem 3">
-                        </div>
-                        <a id="quadrados_saibamais" href="nossoMembros.html">NOSSOS MEMBROS</a>
-                    </div>
-                </div>
+            <div style="background: #d9d9d9" id="menu" class="col-md-8 justify-content-end text-center">
+                <a class="navegacao" href="#principal">Principal</a>
+                <a class="navegacao" href="#saibamais">Saiba mais</a>
+                <a class="navegacao" href="#mapa">Mapa</a>
+                <a class="navegacao" href="#contato">Contato</a>
+                <a class="navegacao" href="telalogin/login.html" onclick="">Login</a>
             </div>
-            <div id="mapa" style= "background: #4F6AFF; color:white" id="tela_mapa" class="row justify-content-center">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.7827508326413!2d-46.57681992591791!3d-23.647950064776655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce434992a4cad7%3A0x75aa65b7b5099c2!2sMaua%20Institute%20of%20Technology!5e0!3m2!1sen!2sbr!4v1728900231727!5m2!1sen!2sbr"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" class="col-8 justify-content-center"></iframe>
-            </div>
-            <div id="contato" style="background-color: #001585; color:white" class="row">
-                <div class="col-md-7 ">
-                    <h2>Entre em contato com a gente!</h2>
-                    <label class="mr-2" for="nome">Nome:</label>
-                    <input class="m-2" type="text" name="Nome:" id="nome">
+        </nav>
+    </header>
+    <main>
+        <div id="principal" style="background: #001585; color:white" class="row">
+            <div class="row">
+                <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+                    <h1 class="text-center">Bem-vindo ao Matemática no Metrô</h1>
                     <br>
-                    <label class="mr-2" for="email">Email:</label>
-                    <input class="m-2" type="email" name="Email:" id="email">
+                    <br>   
+                    <p class="text-center">Nós somos um projeto realizado na estação do metrô Sacomã, em São Paulo, e visamos sanar as dúvidas em matemática dos usuários que frequentam esse meio de transporte. Independente da idade, nossos membros são preparados para auxiliar o público com seus problemas matemáticos.</p>
                     <br>
-                    <label class="mr-2" for="faleaqui">Fale Aqui:</label>
-                    <input class="m-2" type="text" name="Fale Aqui:" id="faleaqui">
-                    <br>
-                    <button class="m-2" style="background-color: yellow; border:solid black 2px">Entre em contato</button>
-                    <div class="col-md-5">
-                        <img src="assets/logoMatMetroBordas.png" alt="">
+                    <p class="text-center">Clique em 'Saiba Mais' para conhecer melhor a iniciativa</p>
+                    <div class="text-center mt-5"> <!-- Keep margin-top as 5 -->
+                        <button class="btn btn-primary" style="width: auto; padding: 10px 20px; background-color: white; color: #001585; border: 2px solid #001585;">Saiba Mais +</button>
                     </div>
                 </div>
+                <div class="col-md-5 text-center">
+                    <img style="width: 100%;" src="assets/mascaraImagem.png" alt="mascara_imagem">
+                </div>
             </div>
-        </main>
-        <footer style= "background: #d9d9d9" id="rodape" class="row">
-            <div class="text-center">
-                <h5>Todos os Direitos Reservados</h5>
-                <h3>Colaboradores:</h3>
+        </div>                  
+        <div id="saibamais" style="background: #FFFFFF" class="row ">
+            <div class="quadrados">
+                <div class="quadrado">
+                    <div class="imagem-redonda">
+                        <img src="assets/tudoSobreNos.png">
+                    </div>
+                    <a id="quadrados_saibamais" href="tudoSobreNois.hmtl">TUDO SOBRE NÓIS</a>
+                </div>
+                <div class="quadrado">
+                    <div class="imagem-redonda">
+                        <img src="assets/jogarMatMetro.png">
+                    </div>
+                    <a id="quadrados_saibamais" href="jogarMatMetro.html">JOGAR MATMETRÔ</a>
+                </div>
+                <div class="quadrado">
+                    <div class="imagem-redonda">
+                        <img src="assets/nossoMembros.png" alt="Descrição da imagem 3">
+                    </div>
+                    <a id="quadrados_saibamais" href="nossoMembros.html">NOSSOS MEMBROS</a>
+                </div>
             </div>
-            <div class="text-center p-5">
-                <img id="logo-imt" style="width: 25%;" src="assets/logo-IMT 1.png" class="col-sm-6">
-                <img id="logo-sp" style="width: 25%;" src="assets/.png" class="col-sm-6">
+        </div>
+        <div id="mapa" style="background: #4F6AFF; color:white" id="tela_mapa" class="row justify-content-center">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.7827508326413!2d-46.57681992591791!3d-23.647950064776655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce434992a4cad7%3A0x75aa65b7b5099c2!2sMaua%20Institute%20of%20Technology!5e0!3m2!1sen!2sbr!4v1728900231727!5m2!1sen!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="col-8 justify-content-center"></iframe>
+        </div>
+        <div id="contato" style="background-color: #001585; color: white" class="row">
+            <div class="col-md-7">
+                <h2 style="margin-top: 2px; margin-bottom:3px; margin-left:5px">Entre em contato com a gente!</h2>
+                <br>
+                <div class="form-group">
+                    <label for="nome" style="display: none;">Nome:</label>
+                    <input class="m-2" type="text" name="Nome" id="nome" placeholder="Nome:" style="width: 100%; max-width: 500px;">
+                </div>
+                <div class="form-group">
+                    <label for="email" style="display: none;">Email:</label>
+                    <input class="m-2" type="email" name="Email" id="email" placeholder="Email:" style="width: 100%; max-width: 500px;">
+                </div>
+                <div class="form-group">
+                    <label for="faleaqui" style="display: none;">Fale Aqui:</label>
+                    <textarea class="m-2" name="Fale Aqui" id="faleaqui" rows="4" placeholder="Fale Aqui:" style="width: 100%; max-width: 500px;"></textarea>
+                </div>
+                <button class="m-2" style="background-color: yellow; border: solid black 2px">Entre em contato</button>
             </div>
-        </footer>
-    </body>
+            <div class="col-md-5 d-flex align-items-center justify-content-end">
+                <img src="assets/logoMatMetroBordas.png" alt="Logo" style="max-width: 85%; height: auto; margin: 70px;">
+            </div>
+        </div>            
+    </main>
+    <footer style="background: #d9d9d9" id="rodape" class="row">
+        <div class="text-center">
+            <h5>Todos os Direitos Reservados</h5>
+            <h3>Colaboradores:</h3>
+        </div>
+        <div class="text-center p-5">
+            <img id="logo-imt" style="width: 25%;" src="assets/logo-IMT 1.png" class="col-sm-6">
+            <img id="logo-sp" style="width: 25%;" src="assets/.png" class="col-sm-6">
+        </div>
+    </footer>
+</body>
 
 </html>
