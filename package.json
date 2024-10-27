@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "projetointegrador_webdevelopment": "file:"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"

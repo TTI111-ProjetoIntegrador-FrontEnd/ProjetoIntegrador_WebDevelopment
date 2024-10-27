@@ -1,3 +1,14 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.main {
+    margin-top: 60px;
+}
+
 #img-metro {
     height: 50px;
 }
@@ -36,6 +47,16 @@
 
 .quadrado:hover {
     transform: scale(1.05);
+}
+
+.quadrado-esquerdo,
+.quadrado-direito {
+    background-color: #001585;
+
+}
+
+.quadrado-meio {
+    background-color: #4F6AFF;
 }
 
 .imagem-redonda {
