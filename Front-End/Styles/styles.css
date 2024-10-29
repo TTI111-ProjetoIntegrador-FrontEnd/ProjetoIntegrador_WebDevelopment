@@ -60,10 +60,8 @@
 }
 
 .imagem-redonda {
-    width: 100px;
+    width: 150px;
     height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
     margin: 0 auto 130px; /* Ajustei a margem inferior */
 }
 
@@ -80,7 +78,7 @@
 
 #quadrados_saibamais{
     text-decoration: none;
-    color: black;
+    color: rgb(215, 215, 215);
     font-weight: bolder;
 }
 
