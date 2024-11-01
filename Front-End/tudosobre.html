@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo Sobre Nós</title>
+    <link rel="icon" type="image/x-icon" href="assets/minimetro.jpeg">
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box; 
+        }
+
+        body {
+            overflow-x: hidden; 
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #d9d9d9;
+            padding: 10px 20px;
+        }
+
+        #img-metro {
+            height: 50px;
+        }
+
+        .voltar-btn {
+            position: absolute;
+            top: 0;
+            right: 350px; 
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        #principal {
+            background: #001585;
+            color: white;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            padding: 20px;
+            margin-top: 80px; 
+        }
+
+        .main-content {
+            text-align: left;
+            margin: 0 20px; 
+            padding: 60px;
+            max-width: 100%; 
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: white;
+            font-size: 3em;
+        }
+
+        .objective-text {
+            overflow: hidden;
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 2em;
+            margin-top: 10px;
+            position: relative; 
+            padding-left: 50px; 
+        }
+
+        .linha-verde::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px; 
+            height: 30px;   
+            background-color: #00FF55; 
+            border: 2px solid black; 
+            border-radius: 50%; 
+        }
+
+        .linha-azul::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px; 
+            height: 30px; 
+            background-color: #008CFF; 
+            border: 2px solid black; 
+            border-radius: 50%; 
+        }
+
+        .voltar-img {
+            height: 70%;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="row mb-5">
+            <div class="col-md-4 d-flex justify-content-start">
+                <img id="img-metro" src="" alt="logo_simples">
+            </div>
+            <div class="col-md-8 d-flex justify-content-end">
+                <button class="voltar-btn" onclick="window.location.href='index.html'">
+                    <img src="/Front-End/assets/voltar.png" alt="Voltar" class="voltar-img">
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="principal" class="row">
+            <div class="main-content col-12">
+                <h2>Nossos Objetivos:</h2>
+                <p class="objective-text">O projeto Matemática no Metrô é uma parceria entre o Instituto de Engenharia de São Paulo e o Metrô Social, com o apoio do Instituto Mauá de Tecnologia. O projeto consiste em proporcionar aos estudantes do ensino médio e passageiros do transporte metropolitano, aulas gratuitas, ministradas por alunos do primeiro ano de engenharia da Escola de Engenharia Mauá, que desempenharão essa função como voluntários.</p>
+
+                <h2>Onde Estamos Localizados:</h2>
+                <p class="linha-verde">Linha 2 - Verde, Estação Sacomã</p>
+                <p class="linha-azul">Linha 1 - Azul, Estação Ana Rosa</p>
+                
+                <h2>Horários de Funcionamento:</h2>
+                <p>Segundas - Feiras, das 14h às 20h</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
