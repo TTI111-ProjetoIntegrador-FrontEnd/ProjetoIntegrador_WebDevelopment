@@ -8,5 +8,6 @@ O que fazer:
 2- Fazer o footer
 3- Alinhar os textos
 4- Colocar as imagens
-5- 
+5- Adicionar a página de contato
+6- Adicionar o jogo
 

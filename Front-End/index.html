@@ -78,33 +78,29 @@
             </div>
         </div>
 
-        <div id="mapa"
-            style="background: #4F6AFF; color: white; display: flex; justify-content: flex-start; align-items: center; height: 100vh; width:100%;">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.7827508326413!2d-46.57681992591791!3d-23.647950064776655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce434992a4cad7%3A0x75aa65b7b5099c2!2sMaua%20Institute%20of%20Technology!5e0!3m2!1sen!2sbr!4v1728900231727!5m2!1sen!2sbr"
-                width="700" height="450" style="border:0; margin-left: 40px;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div id="mapa" style="background: #4F6AFF; color: white; display: flex; justify-content: flex-start; align-items: center; height: 100vh; width:100%;">
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.7827508326413!2d-46.57681992591791!3d-23.647950064776655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce434992a4cad7%3A0x75aa65b7b5099c2!2sMaua%20Institute%20of%20Technology!5e0!3m2!1sen!2sbr!4v1728900231727!5m2!1sen!2sbr" width="700" height="450" style="border:0; margin-left: 40px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
         </div>
         <div id="contato" style="background-color: #001585; color: white" class="row">
-            <div class="col-md-7">
+            <div class="col-md-7" id="CONTATO">
                 <h2 style="margin-top: 2px; margin-bottom:3px; margin-left:5px">Entre em contato com a gente!</h2>
                 <br>
                 <div class="form-group">
                     <label for="nome" style="display: none;">Nome:</label>
-                    <input class="m-2" type="text" name="Nome" id="nome" placeholder="Nome:"
+                    <input class="m-2" type="text" name="Nome" id="nomeInput" placeholder="Nome:"
                         style="width: 100%; max-width: 500px;">
                 </div>
                 <div class="form-group">
                     <label for="email" style="display: none;">Email:</label>
-                    <input class="m-2" type="email" name="Email" id="email" placeholder="Email:"
+                    <input class="m-2" type="email" name="Email"  id="emailInput" placeholder="Email:"
                         style="width: 100%; max-width: 500px;">
                 </div>
                 <div class="form-group">
                     <label for="faleaqui" style="display: none;">Fale Aqui:</label>
-                    <textarea class="m-2" name="Fale Aqui" id="faleaqui" rows="4" placeholder="Fale Aqui:"
+                    <textarea class="m-2" name="Fale Aqui" id="mensagemInput" rows="4" placeholder="Fale Aqui:"
                         style="width: 100%; max-width: 500px;"></textarea>
                 </div>
-                <button class="m-2" style="background-color: #F8C93C; border: none; border-radius: 12px; width:500px; font-weight:bold;">Entre em contato</button>
+                <button class="m-2" style="background-color: #F8C93C; border: none; border-radius: 12px; width:500px; font-weight:bold;" onclick="cadastrarDados()">Entre em contato</button>
             </div>
             <div class="col-md-5 d-flex align-items-center justify-content-end">
                 <img src="assets/logoprincipal.jpg" alt="Logo" style="max-width: 70%; height: auto; margin: 70px;">
@@ -117,8 +113,8 @@
             <h3>Colaboradores:</h3>
         </div>
         <div class="text-center p-5">
-            <img id="logo-imt" style="width: 25%;" src="assets/logo-IMT 1.png" class="col-sm-6">
-            <img id="logo-sp" style="width: 25%;" src="assets/.png" class="col-sm-6">
+            <img id="logo-imt" style="width: 25%;" src="assets/logo-IMT 1.png" alt="logo_imt" class="col-sm-6">
+            <img id="logo-sp" style="width: 25%;" src="assets/.png" alt="logo_sp" class="col-sm-6">
         </div>
     </footer>
     <script>
@@ -147,8 +143,8 @@
             });
         });
     </script>
-
-
+    <script src="JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </body>
 
