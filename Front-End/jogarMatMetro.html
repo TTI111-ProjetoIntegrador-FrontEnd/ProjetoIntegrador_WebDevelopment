@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jogo MatMetro </title>
+    <link rel="stylesheet" href="Styles/jogarMatMetro.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz de Perguntas Simples</h1>
+        <div id="quiz-container">
+            <p id="question"></p>
+            <div id="options">
+                <button class="option" onclick="checkAnswer(0)"></button>
+                <button class="option" onclick="checkAnswer(1)"></button>
+                <button class="option" onclick="checkAnswer(2)"></button>
+                <button class="option" onclick="checkAnswer(3)"></button>
+            </div>
+            <p id="score"></p>
+            <button id="next-btn" onclick="nextQuestion()">Próxima Pergunta</button>
+        </div>
+
+        <!-- Tela de Resultados Finais -->
+        <div id="result-container" style="display: none;">
+            <h2>Fim do Quiz!</h2>
+            <p id="final-score"></p>
+            <button id="restart-btn" onclick="restartQuiz()">Reiniciar Quiz</button>
+        </div>
+    </div>
+    <script src="JS/jogarMatMetro.js"></script>
+</body>
+</html>
