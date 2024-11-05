@@ -5,61 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tudo Sobre Nós</title>
-    <link rel="icon" type="image/x-icon" href="assets/minimetro.jpeg">
+    <link rel="icon" type="image/x-icon" href="assets/logoprincipal.jpg">
     <link rel="stylesheet" href="Styles/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
         * {
-            box-sizing: border-box; 
+            box-sizing: border-box;
         }
 
         body {
-            overflow-x: hidden; 
+            overflow-x: hidden;
+            margin: 0;
         }
 
+        /* Estilos do header */
         .header {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
             z-index: 1000;
-            background: #d9d9d9;
-            padding: 10px 20px;
+            /* background: #fff; */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 5px 10px;
+            height: 55px;
+            margin-bottom: 0; /* Remover margem inferior */
         }
 
         #img-metro {
             height: 50px;
         }
 
-        .voltar-btn {
-            position: absolute;
-            top: 0;
-            right: 350px; 
-            width: 60px;
-            height: 60px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            z-index: 1;
-        }
-
+        /* Ajusta o conteúdo principal para não ficar embaixo do cabeçalho fixo */
         #principal {
             background: #001585;
             color: white;
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            height: 100vh;
             flex-direction: column;
-            padding: 20px;
-            margin-top: 80px; 
+            padding: 20px;   
+            margin-top: -35px; 
         }
 
+        /* A área que contém o conteúdo */
         .main-content {
             text-align: left;
-            margin: 0 20px; 
-            padding: 60px;
-            max-width: 100%; 
+            margin: 0 20px;
+            padding: 20px;
+            max-width: 100%;
+            overflow-y: auto; /* Permite rolagem caso o conteúdo ultrapasse a tela */
         }
 
         h2 {
@@ -76,8 +72,8 @@
         p {
             font-size: 2em;
             margin-top: 10px;
-            position: relative; 
-            padding-left: 50px; 
+            position: relative;
+            padding-left: 50px;
         }
 
         .linha-verde::before {
@@ -86,11 +82,11 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            width: 30px; 
-            height: 30px;   
-            background-color: #00FF55; 
-            border: 2px solid black; 
-            border-radius: 50%; 
+            width: 30px;
+            height: 30px;
+            background-color: #00FF55;
+            border: 2px solid black;
+            border-radius: 50%;
         }
 
         .linha-azul::before {
@@ -99,29 +95,26 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            width: 30px; 
-            height: 30px; 
-            background-color: #008CFF; 
-            border: 2px solid black; 
-            border-radius: 50%; 
+            width: 30px;
+            height: 30px;
+            background-color: #008CFF;
+            border: 2px solid black;
+            border-radius: 50%;
         }
 
-        .voltar-img {
-            height: 70%;
-            width: auto;
-        }
     </style>
 </head>
 
 <body>
-    <header class="header">
+    <header id="header" class="header">
         <nav class="row mb-5">
-            <div class="col-md-4 d-flex justify-content-start">
-                <img id="img-metro" src="" alt="logo_simples">
+            <div class="col-4 justify-content-start">
+                <img id="img-metro" src="assets/logoprincipal.jpg" alt="logo_simples">
             </div>
-            <div class="col-md-8 d-flex justify-content-end">
-                <button class="voltar-btn" onclick="window.location.href='index.html'">
-                    <img src="/Front-End/assets/voltar.png" alt="Voltar" class="voltar-img">
+            <div class="col-8 d-flex justify-content-end pe-2">
+                <button style="border-radius: 10px; border-style: none" onclick="window.location.href='index.html'">
+                    <img src="/Front-End/assets/voltar.png" style="width: 150px;" class="d-none d-sm-block">
+                    <img src="/Front-End/assets/setavoltar.png" style="width: 40px;" alt="Seta Voltar" class="d-block d-sm-none">
                 </button>
             </div>
         </nav>
