@@ -22,6 +22,7 @@
             margin: 0;
         }
 
+
         /* Estilos do header */
         .header {
             position: fixed;
@@ -64,9 +65,9 @@
         }
 
         h2 {
-            margin-top: 40px;
+            margin-top: 55px;
             color: white;
-            font-size: 3em;
+            font-size: 2.5em;
         }
 
         .objective-text {
@@ -107,10 +108,22 @@
             border-radius: 50%;
         }
 
+        #img-container {
+            width: 100%; /* A imagem vai ocupar toda a largura da tela */
+            overflow: hidden; /* Garante que nada da imagem ultrapasse os limites */
+        }   
+
+        #img-container img {
+            width: 100%; /* Faz a imagem ocupar 100% da largura do container */
+            height: auto; /* Ajusta a altura proporcionalmente à largura */
+            max-height: 300px; /* Limita a altura máxima para não ficar muito alta */
+            object-fit: contain; /* Garante que a imagem seja ajustada proporcionalmente ao espaço */
+        }       
+
     </style>
 </head>
 
-<body>
+<body style="background-color: #001585;">
     <header id="header" class="header">
         <nav class="row mb-5 fixed-top " style="background-color: #FFFFFF;">
             <div class="col-4 justify-content-start" style="background-color: #FFFFFF ;">
@@ -137,6 +150,9 @@
                 
                 <h2>Horários de Funcionamento:</h2>
                 <p>Segundas - Feiras, das 14h às 20h</p>
+            </div>
+            <div id="img-container">
+                <img src="/Front-End/assets/triangulospequenos.png" alt="img-ttr" width="100%"  >
             </div>
         </div>
     </main>
