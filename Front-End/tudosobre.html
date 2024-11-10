@@ -13,7 +13,7 @@
             box-sizing: border-box;
         }
 
-        nav{
+        nav {
             height: 60px;
         }
 
@@ -22,7 +22,6 @@
             margin: 0;
         }
 
-
         /* Estilos do header */
         .header {
             position: fixed;
@@ -30,14 +29,11 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            /* background: #fff; */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             padding: 5px 10px;
             height: 55px;
-            margin-bottom: 0; /* Remover margem inferior */
+            margin-bottom: 0;
         }
-
-
 
         #img-metro {
             height: 60px;
@@ -51,8 +47,8 @@
             align-items: flex-start;
             justify-content: center;
             flex-direction: column;
-            padding: 20px;   
-            margin-top: -35px; 
+            padding: 20px;
+            margin-top: -35px;
         }
 
         /* A área que contém o conteúdo */
@@ -61,7 +57,7 @@
             margin: 0 20px;
             padding: 20px;
             max-width: 100%;
-            overflow-y: auto; /* Permite rolagem caso o conteúdo ultrapasse a tela */
+            overflow-y: auto;
         }
 
         h2 {
@@ -95,7 +91,7 @@
             border-radius: 50%;
         }
 
-        .linha-azul::before {
+        .linha-azul1::before {
             content: '';
             position: absolute;
             left: 0;
@@ -108,17 +104,23 @@
             border-radius: 50%;
         }
 
-        #img-container {
-            width: 100%; /* A imagem vai ocupar toda a largura da tela */
-            overflow: hidden; /* Garante que nada da imagem ultrapasse os limites */
-        }   
+        .linha-amarela {
+            width: 90%; 
+            height: 20px; 
+            background-color: #F8C93C;
+            margin-bottom: 30px; 
+            margin-left: auto;
+        }
 
-        #img-container img {
-            width: 100%; /* Faz a imagem ocupar 100% da largura do container */
-            height: auto; /* Ajusta a altura proporcionalmente à largura */
-            max-height: 300px; /* Limita a altura máxima para não ficar muito alta */
-            object-fit: contain; /* Garante que a imagem seja ajustada proporcionalmente ao espaço */
-        }       
+        .linha-azul {
+            width: 65%; 
+            height: 20px; 
+            background-color: #0028FF; 
+            margin-left: auto;
+            
+        }
+
+       
 
     </style>
 </head>
@@ -145,17 +147,19 @@
                 <p class="objective-text">O projeto Matemática no Metrô é uma parceria entre o Instituto de Engenharia de São Paulo e o Metrô Social, com o apoio do Instituto Mauá de Tecnologia. O projeto consiste em proporcionar aos estudantes do ensino médio e passageiros do transporte metropolitano, aulas gratuitas, ministradas por alunos do primeiro ano de engenharia da Escola de Engenharia Mauá, que desempenharão essa função como voluntários.</p>
 
                 <h2>Onde Estamos Localizados:</h2>
-                <p class="linha-azul">Linha 1 - Azul, Estação Ana Rosa</p>
+                <p class="linha-azul1">Linha 1 - Azul, Estação Ana Rosa</p>
                 <p class="linha-verde">Linha 2 - Verde, Estação Sacomã</p>
-                
+
                 <h2>Horários de Funcionamento:</h2>
                 <p>Segundas - Feiras, das 14h às 20h</p>
             </div>
-            <div id="img-container">
-                <img src="/Front-End/assets/triangulospequenos.png" alt="img-ttr" width="100%"  >
-            </div>
         </div>
     </main>
+
+    <div id="lines-container">
+        <div class="linha-amarela"></div>
+        <div class="linha-azul"></div>
+    </div>
 </body>
 
 </html>
