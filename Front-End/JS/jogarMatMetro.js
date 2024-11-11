@@ -153,7 +153,13 @@ function showResults() {
 
   // Criando o gráfico de setores
   const ctx = document.getElementById('result-chart').getContext('2d');
-  const chart = new Chart(ctx, {
+  // Se o gráfico já existir, destruímos ele antes de criar um novo
+  
+  if (window.chart) {
+    window.chart.destroy();
+  }
+
+  window.chart = new Chart(ctx, {
       type: 'pie', // Tipo de gráfico
       data: {
           labels: ['Acertos', 'Erros'],
@@ -189,7 +195,13 @@ function restartQuiz() {
   selectedQuestions.push(...questions.slice(0, 5));  // Adiciona novas 5 questões
   currentQuestion = 0;
   score = 0;
+  // Esconde o gráfico e a tela de resultados ao reiniciar o quiz
+  document.getElementById('result-container').style.display = 'none';
   loadQuestion();
+  // Limpa o gráfico anterior
+  if (window.chart) {
+    window.chart.destroy(); // Destrói o gráfico atual para renovar
+  }
 }
 
 // Carrega a primeira questão ao abrir a página
