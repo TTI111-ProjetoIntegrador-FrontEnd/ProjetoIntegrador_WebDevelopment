@@ -17,3 +17,5 @@ O que fazer:
 5- Adicionar a página de contato
 6- Adicionar o jogo
 
+max: 1400
+min: 580
