@@ -11,6 +11,13 @@ const CONTATO = mongoose.model(`CONTATO`, mongoose.Schema({
     mensagem: {type: String}
 }))
 
+// banco de dados do jogo
+const JOGO = mongoose.model(`JOGO`, mongoose.Schema({
+    pergunta: {type: String},
+    opcoes: {type: String},
+    resposte: {type: Number}
+}))
+
 async function contatarAoMongoDB() {
     await mongoose.connect(`mongodb+srv://matmetromauapi:12345@cluster0.6b7ba.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
 }
