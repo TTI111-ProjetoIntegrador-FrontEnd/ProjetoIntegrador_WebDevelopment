@@ -18,7 +18,9 @@ body {
 }
 
 #img-metro {
-    height: 50px;
+    height: 80px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 .navegacao {
@@ -28,6 +30,8 @@ body {
     font-weight: bolder;
     padding: 0.3% 3% 0.8% 3%;
     text-decoration: none;
+    font-size: 25px;
+    margin: 20px auto;
 }
 
 .quadrados {
@@ -93,4 +97,79 @@ body {
 
 input, label{
     display:block;
+}
+
+.daltonismo-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+body.protanopia {
+    filter: url(#protanopia);
+}
+
+body.deuteranopia {
+    filter: url(#deuteranopia);
+}
+
+body,p,h1,h2,h3,h4,h5,h6,a,span {
+    font-size: 16px;
+}
+
+body.tritanopia {
+    filter: url(#tritanopia);
+}
+
+.accessibility-options input {
+    display: none;
+}
+
+.accessibility-options label {
+    padding: 10px;
+    background-color: #1286e6;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input:checked+label {
+    background-color: #003b64;
+    color: white;
+}
+
+.filter-button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #003b64;
+    color:#1286e6;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-button:hover {
+    background-color: #ffcc00;
+}
+
+
+svg {
+    display: none;
+}
+
+#daltonismo-select {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: #1286e6; 
+    color: white; 
+    border: none;
+    padding: 1px 1px; 
+    border-radius: 1px; 
+    font-size: 14px; 
+    cursor: pointer;
+}
+#daltonismo-select:hover {
+    background-color: #0e6bb4; 
 }
