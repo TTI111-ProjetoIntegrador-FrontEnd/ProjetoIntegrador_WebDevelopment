@@ -27,17 +27,23 @@
         .header {
             position: fixed;
             top: 0;
-            left: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 5px 10px;
-            height: 55px;
-            margin-bottom: 0;
         }
 
         #img-metro {
             height: 60px; /* Ajustando a altura da logo */
+        }
+
+        .navegacao {
+            color: #001585;
+            border-radius: 6px;
+            font-size: 1.75rem;
+            font-weight: bolder;
+            padding: 0.3% 3% 0.8% 3%;
+            text-decoration: none;
+            font-size: 25px;
+            margin: 20px auto;
         }
 
         /* Ajusta o conteúdo principal para não ficar embaixo do cabeçalho fixo */
@@ -157,15 +163,16 @@
 
 <body style="background-color: #001585;">
     <header id="header" class="header">
-        <nav class="row mb-5 fixed-top" style="background-color: #FFFFFF;">
-            <div class="col-4 justify-content-start" style="background-color: #FFFFFF;">
-                <img id="img-metro" src="assets/logoprincipal.jpg" alt="logo_simples">
+        <nav class="row mb-5">
+            <div class="col-md-4 col-12 d-flex justify-content-start" style="background: #FFFFFF;">
+                <img id="img-metro" src="assets/logoprincipal.jpg" alt="logo_simples" class="img-fluid">
             </div>
-            <div class="col-8 d-flex justify-content-end pe-2">
-                <button style="border-radius: 10px; border-style: none" onclick="window.location.href='index.html'">
-                    <img src="assets/voltar.png" style="width: 120px;" class="d-none d-sm-block"> <!-- Tamanho ajustado -->
-                    <img src="assets/setavoltar.png" style="width: 40px;" alt="Seta Voltar" class="d-block d-sm-none">
-                </button>
+            <div class="col-md-8 col-12 d-flex justify-content-end text-center" id="menu" style="background: #FFFFFF;">
+                <a class="navegacao" href="index.html#principal">Principal</a>
+                <a class="navegacao" href="index.html#saibamais">Saiba mais</a>
+                <a class="navegacao" href="index.html#mapa">Mapa</a>
+                <a class="navegacao" href="index.html#contato">Contato</a>
+                <a class="navegacao" href="telalogin/login.html">Login</a>
             </div>
         </nav>
     </header>
