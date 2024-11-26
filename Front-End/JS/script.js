@@ -18,8 +18,6 @@ const fazerLogin = async () => {
             console.log(response.data)
             emailLoginInput.value = ''
             senhaLoginInput.value = ''
-            // MODAL ALERTA:
-            let alert = document.querySelector('.alert-modal-login')
         }
         catch {
 
