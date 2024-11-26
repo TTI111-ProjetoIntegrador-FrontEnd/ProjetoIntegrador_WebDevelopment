@@ -8,7 +8,7 @@ const port = 3000;
 app.use(bodyParser.json());
 
 // Conectar ao MongoDB (substitua com seu próprio URL do MongoDB)
-mongoose.connect('mongodb://localhost:27017/quiz', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://matmetromauapi:12345@cluster0.6b7ba.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Conectado ao MongoDB!'))
     .catch(err => console.log('Erro de conexão com o MongoDB:', err));
 
