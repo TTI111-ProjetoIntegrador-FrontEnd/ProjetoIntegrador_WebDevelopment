@@ -63,7 +63,7 @@
         </div>
         
         
-
+        <!-- PRINCIPAL -->
         <div id="principal" class="row" style="background: #001585; color: white;">
             <div class="col-md-7 d-flex flex-column align-items-start justify-content-center p-4">
                     <h1 class="text-start">Bem-vindo ao Matemática no Metrô</h1>
@@ -86,7 +86,7 @@
             </div>
         </div>
 
-
+        <!-- SAIBA MAIS -->
         <div id="saibamais" class="section" style="background: #FFFFFF">
             <div class="quadrados">
                 <div class="quadrado quadrado-esquerdo">
@@ -113,6 +113,7 @@
             </div>
         </div>
 
+        <!-- MAPA -->
         <div onload="initMap()" style="background-color: #4F6AFF ;">
             <h1 class="">Mapa até a estação Sacomã</h1> 
             <div id="mapa" class="d-flex justify-content-left align-items-center" style="color: white; height: 100vh;">
@@ -120,31 +121,47 @@
             </div>
         </div>
 
-        <div id="contato" style="background-color: #001585; color: white" class="row">
-            <div class="col-md-7" id="CONTATO">
-                <h2 style="margin-top: 2px; margin-bottom:3px; margin-left:5px">Entre em contato com a gente!!!</h2>
-                <br>
-                <div class="form-group">
-                    <label for="nome" style="display: none;">Nome:</label>
-                    <input class="m-2" type="text" name="Nome" id="nomeInput" placeholder="Nome:"
-                        style="width: 100%; max-width: 500px;">
-                </div>
-                <div class="form-group">
-                    <label for="email" style="display: none;">Email:</label>
-                    <input class="m-2" type="email" name="Email"  id="emailInput" placeholder="Email:"
-                        style="width: 100%; max-width: 500px;">
-                </div>
-                <div class="form-group">
-                    <label for="faleaqui" style="display: none;">Escreva sua mensagem:</label>
-                    <textarea class="m-2" name="Fale Aqui" id="mensagemInput" rows="4" placeholder="Fale Aqui:"
-                        style="width: 100%; max-width: 500px;"></textarea>
-                </div>
-                <button class="m-2" style="background-color: #F8C93C; border: none; border-radius: 12px; width:500px; font-weight:bold;" onclick="cadastrarDados()">Entre em contato</button>
+       <!-- CONTATO -->
+    <div id="contato" style="background-color: #001585; color: white" class="row">
+        <div class="col-md-7" id="CONTATO">
+            <h2 style="margin-top: 2px; margin-bottom:3px; margin-left:5px">Entre em contato com a gente!</h2>
+            <br>
+            <div class="form-group">
+                <label for="nome" style="display: none;">Nome:</label>
+                <input class="m-2" type="text" name="Nome" id="nomeInput" placeholder="Nome:"
+                    style="width: 100%; max-width: 500px;">
             </div>
-            <div class="col-md-5 d-flex align-items-center justify-content-end">
-                <img src="assets/logoprincipal.jpg" alt="Logo" style="max-width: 70%; height: auto; margin: 70px;">
+            <div class="form-group">
+                <label for="email" style="display: none;">Email:</label>
+                <input class="m-2" type="email" name="Email" id="emailInput" placeholder="Email:"
+                    style="width: 100%; max-width: 500px;">
+            </div>
+            <div class="form-group">
+                <label for="faleaqui" style="display: none;">Escreva sua mensagem:</label>
+                <textarea class="m-2" name="Fale Aqui" id="mensagemInput" rows="4" placeholder="Fale Aqui:"
+                    style="width: 100%; max-width: 500px;"></textarea>
+            </div>
+            <button class="m-2" style="background-color: #F8C93C; border: none; border-radius: 12px; width:500px; font-weight:bold;" onclick="cadastrarDados()">Entre em contato</button>
+        </div>
+        <div class="col-md-5 d-flex align-items-center justify-content-end flex-column" style="position: relative; top: -30px;">
+            <!-- Logo principal -->
+            <img src="assets/logoprincipal.jpg" alt="Logo" style="max-width: 40%; height: auto; margin: 70px 0 10px;">
+
+            <!-- Redes sociais abaixo da logo -->
+            <div class="d-flex justify-content-center" style="margin-top: 10px;">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/pedrovpassos" target="_blank">
+                    <img src="assets/insta150.png" alt="Instagram" style="max-width: 60px; margin: 0 10px;">
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5514997467490" target="_blank">
+                    <img src="assets/wpp150.png" alt="WhatsApp" style="max-width: 60px; margin: 0 10px;">
+                </a>
             </div>
         </div>
+    </div>
+
+
 
         <script>
             function toggleMenu() {
@@ -182,12 +199,14 @@
     </script>
     <footer style="background: #d9d9d9" id="rodape" class="row">
         <div class="text-center">
-            <h5>Todos os Direitos Reservados</h5>
             <h3>Colaboradores</h3>
         </div>
         <div class="text-center p-5">
-            <img id="logo-imt" style="width: 15%;" src="assets/logo-IMT 1.png" alt="logo_imt" class="col-sm-6 img-fluid">
-            <img id="logo-eng" style="width: 5%;" src="assets/logoIntEng.png" alt="logo_eng" class="col-sm-6 img-fluid ms-5">
+            <img id="logo-imt" style="width: 10%; margin: 0 100px;" src="assets/logo-IMT 1.png" alt="logo_imt" class="col-sm-6 img-fluid">
+            <img id="logo-eng" style="width: 4%; margin: 0 100px;" src="assets/logoIntEng.png" alt="logo_eng" class="col-sm-6 img-fluid ms-5">
+        </div>
+        <div class="text-center">
+            <h3>Todos os Direitos Reservados &copy; </h3>
         </div>
     </footer>
 
