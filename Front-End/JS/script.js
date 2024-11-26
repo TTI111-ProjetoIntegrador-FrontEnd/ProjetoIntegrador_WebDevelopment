@@ -2,6 +2,39 @@ const protocolo = 'http://'
 const baseURL = 'localhost:3000'
 const contatoEndpoint = '/contato'
 
+const fazerLogin = async () => {
+    let emailLoginInput = document.querySelector('#emailLoginInput')
+    let senhaLoginInput = document.querySelector('#senhaLoginInput')
+    let emailLogin = emailLoginInput.value
+    let senhaLogin = senhaLoginInput.value
+    if (emailLogin && senhaLogin){
+        try {
+            const loginEndpoint = '/login'
+            const URLCompleta = `${protocolo}${baseURL}${loginEndpoint}`
+            const response = await axios.post(
+                URLCompleta,
+                {login: emailLogin, password: senhaLogin}
+            )
+            console.log(response.data)
+            emailLoginInput.value = ''
+            senhaLoginInput.value = ''
+        }
+        catch {
+
+        }
+    }
+    else {
+        let alert = document.querySelector('.formLogin')
+        alert.innerHTML = "Preencha todos os campos"
+        alert.classList.add('show', 'alert-danger')
+        alert.classList.remove('d-none')
+        setTimeout(() => {
+            alert.classList.remove('show')
+            alert.classList.add('d-none')
+        }, 4000);
+    }
+}
+
 async function obterDados() {
     const URLCompleta = `${protocolo}${baseURL}${contatoEndpoint}`;
     const dados = (await axios.get(URLCompleta)).data
