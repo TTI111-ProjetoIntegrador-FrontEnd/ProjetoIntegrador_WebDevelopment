@@ -1,12 +1,14 @@
 const protocolo = 'http://'
 const baseURL = 'localhost:3000'
-const contatoEndpoint = '/contato'
+// const contatoEndpoint = '/contato'
 
 const fazerLogin = async () => {
     let emailLoginInput = document.querySelector('#emailLoginInput')
     let senhaLoginInput = document.querySelector('#senhaLoginInput')
     let emailLogin = emailLoginInput.value
     let senhaLogin = senhaLoginInput.value
+
+    // O PROBLEMA ESTÁ NO IF/ ELSE com mais alguma coisa !!!!!!!!!!!!!!!!!!!!
     if (emailLogin && senhaLogin){
         try {
             const loginEndpoint = '/login'
@@ -18,24 +20,52 @@ const fazerLogin = async () => {
             console.log(response.data)
             emailLoginInput.value = ''
             senhaLoginInput.value = ''
-        }
-        catch {
 
+            let alert = document.querySelector('#alerta')
+            alert.innerHTML = 'Acesso autorizado!'
+            // alerta verde de sucesso
+            alert.classList.add('show', 'alert-success')
+            // ignorar alerta vermelho de erro
+            alert.classList.remove('d-none', 'alert-danger')
+            setTimeout(() => {
+                alert.classList.add('d-none')
+                alert.classList.remove('show')
+            }, 10000)
+
+            // JÁ JÁ VEJO COMO ADEQUAR ISSO
+            // const loginLink = document.querySelector('#loginLink')
+            // loginLink.innerHTML = "Logout"
+
+            // Redireciona para a página desejada
+            window.location.assign('admin.html');
+        }
+        catch (error) {
+            let alert = document.querySelector('#alerta')
+            alert.innerHTML = "Não foi possível acessar!!"
+            // alerta vermelho de fracasso
+            alert.classList.add('show', 'alert-danger')
+            // ignorar o alerta verde de sucesso
+            alert.classList.remove('d-none', 'alert-success')
+            setTimeout(() => {
+                alert.classList.add('d-none')
+                alert.classList.remove('show')
+            }, 10000)
         }
     }
     else {
-        let alert = document.querySelector('.formLogin')
+        let alert = document.querySelector('#alerta')
         alert.innerHTML = "Preencha todos os campos"
         alert.classList.add('show', 'alert-danger')
         alert.classList.remove('d-none')
-        setTimeout(() => {
-            alert.classList.remove('show')
-            alert.classList.add('d-none')
-        }, 4000);
+        // setTimeout(() => {
+        //     alert.classList.add('d-none')
+        //     alert.classList.remove('show')
+        // }, 10000)
     }
 }
 
 async function obterDados() {
+    const contatoEndpoint = '/contato'
     const URLCompleta = `${protocolo}${baseURL}${contatoEndpoint}`;
     const dados = (await axios.get(URLCompleta)).data
     console.log(dados);
@@ -66,6 +96,7 @@ async function obterDados() {
 }
 
 async function cadastrarDados() {
+    const contatoEndpoint = '/contato'
     const URLCompleta = `${protocolo}${baseURL}${contatoEndpoint}`;
 
     //pega os inputs dos dados inseridos pelo usuário
