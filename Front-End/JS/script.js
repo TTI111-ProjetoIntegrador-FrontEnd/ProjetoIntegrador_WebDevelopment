@@ -3,12 +3,13 @@ const baseURL = 'localhost:3000'
 // const contatoEndpoint = '/contato'
 
 const fazerLogin = async () => {
+    event.preventDefault(); // Previne o recarregamento da página
+
     let emailLoginInput = document.querySelector('#emailLoginInput')
     let senhaLoginInput = document.querySelector('#senhaLoginInput')
     let emailLogin = emailLoginInput.value
     let senhaLogin = senhaLoginInput.value
 
-    // O PROBLEMA ESTÁ NO IF/ ELSE com mais alguma coisa !!!!!!!!!!!!!!!!!!!!
     if (emailLogin && senhaLogin){
         try {
             const loginEndpoint = '/login'
@@ -32,10 +33,6 @@ const fazerLogin = async () => {
                 alert.classList.remove('show')
             }, 10000)
 
-            // JÁ JÁ VEJO COMO ADEQUAR ISSO
-            // const loginLink = document.querySelector('#loginLink')
-            // loginLink.innerHTML = "Logout"
-
             // Redireciona para a página desejada
             window.location.assign('admin.html');
         }
@@ -57,10 +54,10 @@ const fazerLogin = async () => {
         alert.innerHTML = "Preencha todos os campos"
         alert.classList.add('show', 'alert-danger')
         alert.classList.remove('d-none')
-        // setTimeout(() => {
-        //     alert.classList.add('d-none')
-        //     alert.classList.remove('show')
-        // }, 10000)
+        setTimeout(() => {
+            alert.classList.add('d-none')
+            alert.classList.remove('show')
+        }, 10000)
     }
 }
 
@@ -136,7 +133,7 @@ async function cadastrarDados() {
     // terciario.innerHTML = '';
     for (let dado of dados) {
         let paragrafo = document.createElement('p');
-        paragrafo.innerHTML = `Mensagem de ${dado.nome}: ${dado.mensagem} \n`;
+        paragrafo.innerHTML = `Mensagem de ${dado.nome}: ${dado.mensagem}`;
 
         terciario.appendChild(paragrafo);
     }
