@@ -61,35 +61,51 @@ const fazerLogin = async () => {
     }
 }
 
+function listarDados (dados) {
+    let tabela = document.querySelector('.dados')
+    let corpoTabela = tabela.getElementsByTagName('tbody')[0]
+    corpoTabela.innerHTML=""
+    for (let dado of dados) {
+        let linha = corpoTabela.insertRow(0)
+        let celulaNome = linha.insertCell(0)
+        let celulaEmail = linha.insertCell(1)
+        let celulaMensagem = linha.insertCell(2)
+        celulaNome.innerHTML = dado.nome
+        celulaEmail.innerHTML = dado.email
+        celulaMensagem.innerHTML = dado.mensagem
+    }
+}
+
 async function obterDados() {
     const contatoEndpoint = '/contato'
     const URLCompleta = `${protocolo}${baseURL}${contatoEndpoint}`;
     const dados = (await axios.get(URLCompleta)).data
-    console.log(dados);
+    // console.log(dados);
+    listarDados(dados)
 
-    let principal = document.querySelector('#principal');
-    for (let dado of dados) {
-        let paragrafo = document.createElement('p');
-        paragrafo.innerHTML = `Nome: ${dado.nome}`;
+    // let principal = document.querySelector('#principal');
+    // for (let dado of dados) {
+    //     let paragrafo = document.createElement('p');
+    //     paragrafo.innerHTML = `Nome: ${dado.nome}`;
 
-        principal.appendChild(paragrafo);
-    }
+    //     principal.appendChild(paragrafo);
+    // }
 
-    let secundario = document.querySelector('#secundario');
-    for (let dado of dados) {
-        let paragrafo = document.createElement('p');
-        paragrafo.innerHTML = `Email: ${dado.email}`;
+    // let secundario = document.querySelector('#secundario');
+    // for (let dado of dados) {
+    //     let paragrafo = document.createElement('p');
+    //     paragrafo.innerHTML = `Email: ${dado.email}`;
 
-        secundario.appendChild(paragrafo);
-    }
+    //     secundario.appendChild(paragrafo);
+    // }
 
-    let terciario = document.querySelector('#terciario');
-    for (let dado of dados) {
-        let paragrafo = document.createElement('p');
-        paragrafo.innerHTML = `Mensagem de ${dado.nome}: ${dado.mensagem}`;
+    // let terciario = document.querySelector('#terciario');
+    // for (let dado of dados) {
+    //     let paragrafo = document.createElement('p');
+    //     paragrafo.innerHTML = `Mensagem de ${dado.nome}: ${dado.mensagem}`;
 
-        terciario.appendChild(paragrafo);
-    }
+    //     terciario.appendChild(paragrafo);
+    // }
 }
 
 async function cadastrarDados() {
