@@ -2,17 +2,9 @@
     box-sizing: border-box;
 }
 
-nav {
-    height: 60px;
-}
-
 body {
     overflow-x: hidden;
-    margin: 0;
-    height: 100%;
 }
-
-/* Estilos do header */
 .header {
     position: fixed;
     top: 0;
@@ -20,9 +12,14 @@ body {
     z-index: 1000;
 }
 
+.main {
+    margin-top: 60px;
+}
+
 #img-metro {
-    height: 60px;
-    /* Ajustando a altura da logo */
+    height: 80px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 .navegacao {
@@ -36,20 +33,10 @@ body {
     margin: 20px auto;
 }
 
-/* Ajusta o conteúdo principal para não ficar embaixo do cabeçalho fixo */
 #principal {
-    background: #001585;
+    background-color: #001585;
     color: white;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-    margin-top: 55px;
-    /* Ajuste para que o conteúdo não fique embaixo do cabeçalho fixo */
-    min-height: 100vh;
-    box-sizing: border-box;
-    padding-bottom: 20px;
+    height: fit-content;
 }
 
 /* A área que contém o conteúdo */
@@ -100,63 +87,4 @@ h2 {
     font-size: 1.2em;
     color: #FFF;
     margin-top: 5px;
-}
-
-.linha-amarela {
-    width: 70%;
-    height: 8px;
-    background-color: #F8C93C;
-    margin: 20px auto;
-}
-
-
-/* Responsividade para telas menores (abaixo de 768px) */
-@media (max-width: 768px) {
-    .member-card {
-        flex-direction: column;
-        /* Imagem na parte superior e texto abaixo */
-        align-items: center;
-        /* Centraliza a imagem e o texto */
-        text-align: center;
-        /* Centraliza o texto */
-    }
-
-    .member-card img {
-        margin-right: 0;
-        margin-bottom: 15px;
-        /* Adiciona espaçamento entre a imagem e o texto */
-        width: 100px;
-        /* Ajusta o tamanho da imagem */
-        height: 100px;
-        /* Ajusta o tamanho da imagem */
-    }
-
-    .member-card h4 {
-        font-size: 1.6em;
-        /* Reduz o tamanho do título */
-    }
-
-    .member-card p {
-        font-size: 1.1em;
-        /* Ajuste no tamanho do texto */
-    }
-}
-
-/* Para telas muito pequenas (abaixo de 341px) */
-@media (max-width: 341px) {
-    .member-card img {
-        width: 80px;
-        /* Reduz ainda mais o tamanho da imagem */
-        height: 80px;
-    }
-
-    .member-card h4 {
-        font-size: 1.4em;
-        /* Diminui o título */
-    }
-
-    .member-card p {
-        font-size: 1em;
-        /* Reduz o texto */
-    }
 }
