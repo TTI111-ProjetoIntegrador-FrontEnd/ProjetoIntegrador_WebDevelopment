@@ -9,63 +9,79 @@
     <link rel="stylesheet" href="Styles/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
 </head>
 
 <body>
-
-    <svg width="0" height="0">
-        <defs>
-            <filter id="protanopia">
-                <feColorMatrix type="matrix"
-                    values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0"/>
-            </filter>
-            <filter id="deuteranopia">
-                <feColorMatrix type="matrix"
-                    values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0"/>
-            </filter>
-            <filter id="tritanopia">
-                <feColorMatrix type="matrix"
-                    values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0"/>
-            </filter>
-        </defs>
-    </svg>
-
     <header id="header" class="header">
-        <nav class="row mb-5">
-            <div class="col-md-4 col-12 d-flex justify-content-start" style="background: #FFFFFF;">
-                <img id="img-metro" src="assets/logoprincipal.jpg" alt="logo_simples" class="img-fluid">
-            </div>
-            <div class="col-md-8 col-12 d-flex justify-content-end text-center" id="menu" style="background: #FFFFFF;">
-                <a class="navegacao" href="#principal">Principal</a>
-                <a class="navegacao" href="#saibamais">Saiba mais</a>
-                <a class="navegacao" href="#mapa">Mapa</a>
-                <a class="navegacao" href="#contato">Contato</a>
-                <a class="navegacao" href="login.html">Login</a>
+        <svg width="0" height="0">
+            <defs>
+                <filter id="protanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="deuteranopia">
+                    <feColorMatrix type="matrix" values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="tritanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
+                </filter>
+            </defs>
+        </svg>
+        <nav class="navbar navbar-expand-md" style="background: #FFFFFF">
+            <img id="img-metro" src="assets/logoprincipal.jpg" alt="logo_simples"
+                class="navbar-brand justify-content-start">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav"
+                aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="navegacao nav-link active me-2" href="#principal">Principal</a>
+                    <a class="navegacao nav-link active me-2" href="#saibamais">Saiba mais</a>
+                    <a class="navegacao nav-link active me-2" href="#mapa">Mapa</a>
+                    <a class="navegacao nav-link active me-2" href="#contato">Contato</a>
+                    <a class="navegacao nav-link active me-2" href="login.html">Login</a>
+                </div>
             </div>
         </nav>
-    </header> 
+    </header>
     <main>
 
-        <select id="daltonismo-select" style="position:fixed; top: 33px; right: 955px; z-index: 1000; border-radius: 8px;">
+        <select id="daltonismo-select"
+            style="position:fixed; top: 33px; right: 955px; z-index: 1000; border-radius: 8px;">
             <option value="">Modo Padrão</option>
             <option value="protanopia">Protanopia</option>
             <option value="deuteranopia">Deuteranopia</option>
             <option value="tritanopia">Tritanopia</option>
         </select>
-        
         <div vw class="enabled">
             <div vw-access-button class="active"></div>
             <div vw-plugin-wrapper>
                 <div class="vw-plugin-top-wrapper"></div>
             </div>
         </div>
-        
-        
+
+
         <!-- PRINCIPAL -->
-        <div id="principal" class="row" style="background: #001585; color: white;">
+        <br><br><br>
+        <div id="principal" class="row align-items-center">
             <div class="col-md-7 d-flex flex-column align-items-start justify-content-center p-4">
-                    <h1 class="text-start">Bem-vindo ao Matemática no Metrô</h1>
+<!-- <<<<<<< menu -->
+                <h1 class="text-start mt-5">Bem-vindo ao Matemática no Metrô</h1>
+                <br>
+                <p class="text-start">Nós somos um projeto realizado na estação do metrô Sacomã, em São Paulo, e
+                    visamos sanar as dúvidas em matemática dos usuários que frequentam esse meio de transporte.
+                    Independente da idade, nossos membros são preparados para auxiliar o público com seus problemas
+                    matemáticos.</p>
+                <br>
+                <p class="text-start">Clique em 'Saiba Mais' para conhecer melhor a iniciativa</p>
+                <div class="d-flex justify-content-center mt-4">
+                    <a href="#saibamais">
+                        <button class="btn btn-light text-dark border-2 border-primary">Saiba Mais +</button>
+                    </a>
+<!-- ======= -->
+<!--                     <h1 class="text-start">Bem-vindo ao Matemática no Metrô</h1>
                     <br>
                     <p class="text-start">Nós somos um projeto realizado na estação do metrô Sacomã, em São Paulo, e visamos sanar as dúvidas em matemática dos usuários que frequentam esse meio de transporte. Independente da idade, nossos membros são preparados para auxiliar o público com seus problemas matemáticos.</p>
                     <br>
@@ -74,13 +90,21 @@
                         <a href="#saibamais">
                             <button class="btn btn-light text-dark border-2 border-primary">Saiba Mais +</button>
                         </a>
-                    </div>
+                    </div> -->
+<!-- >>>>>>> main -->
                 </div>
+            </div>
 
+<!-- <<<<<<< menu -->
+<!--             <div class="col-md-5">
+                <img class="img-fluid" src="assets/mascaraImagem.png" alt="mascara_imagem"> -->
+<!-- ======= -->
                 <div class="col-md-5 p-0">
                     <img class="img-fluid w-100"  src="assets/imagemCapaPrin.jpg" alt="imagemCapaPrin">
                 </div>
+<!-- >>>>>>> main -->
             </div>
+        </div>
         </div>
 
         <!-- SAIBA MAIS -->
@@ -91,26 +115,38 @@
                         <img src="assets/tudoSobreNos.png">
                     </div>
                     <button onclick="window.location.href='tudoSobre.html'"
-                        style="background: rgb(255, 255, 255); font-weight:bold; font-size: 20px; border-radius:8px; border:none;margin: 40px;">Tudo Sobre Nós </button>
+                        style="background: rgb(255, 255, 255); font-weight:bold; font-size: 20px; border-radius:8px; border:none;margin: 40px;">Tudo
+                        Sobre Nós </button>
                 </div>
                 <div class="quadrado quadrado-meio">
                     <div class="imagem-redonda">
                         <img src="assets/jogarMatMetro.png">
                     </div>
                     <button onclick="window.location.href='jogarMatMetro.html'"
-                        style="background: #F8C93C; font-weight:bold; font-size: 20px; border-radius:8px; border:none; margin: 40px;">Jogar MatMetro</button>
+                        style="background: #F8C93C; font-weight:bold; font-size: 20px; border-radius:8px; border:none; margin: 40px;">Jogar
+                        MatMetro</button>
                 </div>
                 <div class="quadrado quadrado-direito">
                     <div class="imagem-redonda">
                         <img src="assets/nossoMembros.png" alt="Descrição da imagem 3">
                     </div>
                     <button onclick="window.location.href='membros.html'"
-                        style="background: rgb(255, 255, 255); font-weight:bold; font-size: 20px; border-radius:8px; border:none;margin: 40px;">Nossos Membros </button>
+                        style="background: rgb(255, 255, 255); font-weight:bold; font-size: 20px; border-radius:8px; border:none;margin: 40px;">Nossos
+                        Membros </button>
                 </div>
             </div>
         </div>
 
         <!-- MAPA -->
+<!-- <<<<<<< menu -->
+<!--         <div onload="initMap()" style="background-color: #4F6AFF ;">
+            <h1 class="">Mapa até a estação Sacomã</h1>
+            <div id="mapa" class="d-flex justify-content-left align-items-center" style="color: white; height: 100vh;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0886851798905!2d-46.60500242511699!3d-23.601152163054476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b8e2bf67729%3A0xa60a4690a8cab7d2!2zU2Fjb23Dow!5e0!3m2!1spt-BR!2sbr!4v1728480422829!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0; padding:30px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+<!-- ======= -->
         <div onload="initMap()" class="row" style="background-color: #8392ed;">
             <div style="display: flex; justify-content: space-between; padding: 50px; gap: 30px;">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0886851798905!2d-46.60500242511699!3d-23.601152163054476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f131!3m3!1m2!1s0x94ce5b8e2bf67729%3A0xa60a4690a8cab7d2!2zU2Fjb23Dow!5e0!3m2!1spt-BR!2sbr!4v1728480422829!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -125,12 +161,16 @@
                         <p>Segundas-feiras, das 14h às 20h</p>
                     </div>
                 </div>
+<!-- >>>>>>> main -->
             </div>
         </div>
         
         
         
 
+<!-- <<<<<<< menu -->
+
+<!-- ======= -->
        <!-- CONTATO -->
     <div id="contato" style="background-color: #001585; color: white; padding: 80px;" class="row">
         <div class="col-md-7" id="CONTATO">
@@ -166,9 +206,9 @@
                 <a href="https://wa.me/5514997467490" target="_blank">
                     <img src="assets/wpp150.png" alt="WhatsApp" style="max-width: 60px; margin: 0 10px;">
                 </a>
+<!-- >>>>>>> main -->
             </div>
         </div>
-    </div>
 
 
 
@@ -181,15 +221,15 @@
                     nav.style.display = 'block';
                 }
             }
-        const daltonismoSelect = document.getElementById('daltonismo-select');
+            const daltonismoSelect = document.getElementById('daltonismo-select');
 
 
             function initMap() {
-              var mapOptions = {
-                center: { lat: -23.601152, lng: -46.605002 },
-                zoom: 14
-              };
-              var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+                var mapOptions = {
+                    center: { lat: -23.601152, lng: -46.605002 },
+                    zoom: 14
+                };
+                var map = new google.maps.Map(document.getElementById('map'), mapOptions);
             }
 
 
@@ -211,8 +251,10 @@
             <h3>Colaboradores</h3>
         </div>
         <div class="text-center p-5">
-            <img id="logo-imt" style="width: 10%; margin: 0 100px;" src="assets/logo-IMT 1.png" alt="logo_imt" class="col-sm-6 img-fluid">
-            <img id="logo-eng" style="width: 4%; margin: 0 100px;" src="assets/logoIntEng.png" alt="logo_eng" class="col-sm-6 img-fluid ms-5">
+            <img id="logo-imt" style="width: 10%; margin: 0 100px;" src="assets/logo-IMT 1.png" alt="logo_imt"
+                class="col-sm-6 img-fluid">
+            <img id="logo-eng" style="width: 4%; margin: 0 100px;" src="assets/logoIntEng.png" alt="logo_eng"
+                class="col-sm-6 img-fluid ms-5">
         </div>
         <div class="text-center">
             <h3>Todos os Direitos Reservados &copy; </h3>
@@ -250,6 +292,7 @@
     <script src="JS/script.js"></script>
     <script src="JS/acessibilidade.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
