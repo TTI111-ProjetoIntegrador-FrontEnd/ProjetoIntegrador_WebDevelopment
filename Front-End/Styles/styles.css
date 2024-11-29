@@ -5,6 +5,7 @@
 body {
     overflow-x: hidden;
 }
+
 .header {
     position: fixed;
     top: 0;
@@ -98,6 +99,10 @@ body {
     text-decoration: none;
     color: rgb(215, 215, 215);
     font-weight: bolder;
+}
+
+#mapa > iframe {
+    border-radius: 8px;
 }
 
 input, label{
