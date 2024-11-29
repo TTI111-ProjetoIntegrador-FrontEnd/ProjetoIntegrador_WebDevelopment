@@ -67,6 +67,7 @@
         <br><br><br>
         <div id="principal" class="row align-items-center">
             <div class="col-md-7 d-flex flex-column align-items-start justify-content-center p-4">
+<!-- <<<<<<< menu -->
                 <h1 class="text-start mt-5">Bem-vindo ao Matemática no Metrô</h1>
                 <br>
                 <p class="text-start">Nós somos um projeto realizado na estação do metrô Sacomã, em São Paulo, e
@@ -79,18 +80,36 @@
                     <a href="#saibamais">
                         <button class="btn btn-light text-dark border-2 border-primary">Saiba Mais +</button>
                     </a>
+<!-- ======= -->
+<!--                     <h1 class="text-start">Bem-vindo ao Matemática no Metrô</h1>
+                    <br>
+                    <p class="text-start">Nós somos um projeto realizado na estação do metrô Sacomã, em São Paulo, e visamos sanar as dúvidas em matemática dos usuários que frequentam esse meio de transporte. Independente da idade, nossos membros são preparados para auxiliar o público com seus problemas matemáticos.</p>
+                    <br>
+                    <p class="text-start">Clique em 'Saiba Mais' para conhecer melhor a iniciativa</p>
+                    <div class="d-flex justify-content-center mt-4">
+                        <a href="#saibamais">
+                            <button class="btn btn-light text-dark border-2 border-primary">Saiba Mais +</button>
+                        </a>
+                    </div> -->
+<!-- >>>>>>> main -->
                 </div>
             </div>
 
-            <div class="col-md-5">
-                <img class="img-fluid" src="assets/mascaraImagem.png" alt="mascara_imagem">
+<!-- <<<<<<< menu -->
+<!--             <div class="col-md-5">
+                <img class="img-fluid" src="assets/mascaraImagem.png" alt="mascara_imagem"> -->
+<!-- ======= -->
+                <div class="col-md-5 p-0">
+                    <img class="img-fluid w-100"  src="assets/imagemCapaPrin.jpg" alt="imagemCapaPrin">
+                </div>
+<!-- >>>>>>> main -->
             </div>
         </div>
         </div>
 
         <!-- SAIBA MAIS -->
         <div id="saibamais" class="section" style="background: #FFFFFF">
-            <div class="quadrados">
+            <div class="quadrados" style="padding-bottom: 20px;">
                 <div class="quadrado quadrado-esquerdo">
                     <div class="imagem-redonda">
                         <img src="assets/tudoSobreNos.png">
@@ -119,57 +138,75 @@
         </div>
 
         <!-- MAPA -->
-        <div onload="initMap()" style="background-color: #4F6AFF ;">
+<!-- <<<<<<< menu -->
+<!--         <div onload="initMap()" style="background-color: #4F6AFF ;">
             <h1 class="">Mapa até a estação Sacomã</h1>
             <div id="mapa" class="d-flex justify-content-left align-items-center" style="color: white; height: 100vh;">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0886851798905!2d-46.60500242511699!3d-23.601152163054476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b8e2bf67729%3A0xa60a4690a8cab7d2!2zU2Fjb23Dow!5e0!3m2!1spt-BR!2sbr!4v1728480422829!5m2!1spt-BR!2sbr"
                     width="600" height="450" style="border:0; padding:30px;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+<!-- ======= -->
+        <div onload="initMap()" class="row" style="background-color: #8392ed;">
+            <div style="display: flex; justify-content: space-between; padding: 50px; gap: 30px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0886851798905!2d-46.60500242511699!3d-23.601152163054476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f131!3m3!1m2!1s0x94ce5b8e2bf67729%3A0xa60a4690a8cab7d2!2zU2Fjb23Dow!5e0!3m2!1spt-BR!2sbr!4v1728480422829!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                <div style="display: flex; align-items: center; max-width: 400px;">
+                    <div class="container" style="border-radius: 8px; background-color: white; padding: 20px;">
+                        <h2>Local das aulas:</h2>
+                        <p>Linha 1 - Azul, Estação Ana Rosa</p>
+                        <p>Linha 2 - Verde, Estação Sacomã</p>
+                        <br>
+                        <h2>Horário das aulas:</h2>
+                        <p>Segundas-feiras, das 14h às 20h</p>
+                    </div>
+                </div>
+<!-- >>>>>>> main -->
             </div>
         </div>
+        
+        
+        
 
-        <!-- CONTATO -->
-        <div id="contato" style="background-color: #001585; color: white" class="row">
-            <div class="col-md-7" id="CONTATO">
-                <h2 style="margin-top: 2px; margin-bottom:3px; margin-left:5px">Entre em contato com a gente!</h2>
-                <br>
-                <div class="form-group">
-                    <label for="nome" style="display: none;">Nome:</label>
-                    <input class="m-2" type="text" name="Nome" id="nomeInput" placeholder="Nome:"
-                        style="width: 100%; max-width: 500px;">
-                </div>
-                <div class="form-group">
-                    <label for="email" style="display: none;">Email:</label>
-                    <input class="m-2" type="email" name="Email" id="emailInput" placeholder="Email:"
-                        style="width: 100%; max-width: 500px;">
-                </div>
-                <div class="form-group">
-                    <label for="faleaqui" style="display: none;">Escreva sua mensagem:</label>
-                    <textarea class="m-2" name="Fale Aqui" id="mensagemInput" rows="4" placeholder="Fale Aqui:"
-                        style="width: 100%; max-width: 500px;"></textarea>
-                </div>
-                <button class="m-2"
-                    style="background-color: #F8C93C; border: none; border-radius: 12px; width:500px; font-weight:bold;"
-                    onclick="cadastrarDados()">Entre em contato</button>
+<!-- <<<<<<< menu -->
+
+<!-- ======= -->
+       <!-- CONTATO -->
+    <div id="contato" style="background-color: #001585; color: white; padding: 80px;" class="row">
+        <div class="col-md-7" id="CONTATO">
+            <h2 style="margin-top: 2px; margin-bottom:3px; margin-left:5px">Entre em contato com a gente!</h2>
+            <br>
+            <div class="form-group">
+                <label for="nome" style="display: none;">Nome:</label>
+                <input class="m-2" type="text" name="Nome" id="nomeInput" placeholder="Nome:"
+                    style="width: 100%; max-width: 500px;">
             </div>
-            <div class="col-md-5 d-flex align-items-center justify-content-end flex-column"
-                style="position: relative; top: -30px;">
-                <!-- Logo principal -->
-                <img src="assets/logoprincipal.jpg" alt="Logo"
-                    style="max-width: 40%; height: auto; margin: 70px 0 10px;">
-
-                <!-- Redes sociais abaixo da logo -->
-                <div class="d-flex justify-content-center" style="margin-top: 10px;">
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/pedrovpassos" target="_blank">
-                        <img src="assets/insta150.png" alt="Instagram" style="max-width: 60px; margin: 0 10px;">
-                    </a>
-                    <!-- WhatsApp -->
-                    <a href="https://wa.me/5514997467490" target="_blank">
-                        <img src="assets/wpp150.png" alt="WhatsApp" style="max-width: 60px; margin: 0 10px;">
-                    </a>
-                </div>
+            <div class="form-group">
+                <label for="email" style="display: none;">Email:</label>
+                <input class="m-2" type="email" name="Email" id="emailInput" placeholder="Email:"
+                    style="width: 100%; max-width: 500px;">
+            </div>
+            <div class="form-group">
+                <label for="faleaqui" style="display: none;">Escreva sua mensagem:</label>
+                <textarea class="m-2" name="Fale Aqui" id="mensagemInput" rows="4" placeholder="Fale Aqui:"
+                    style="width: 100%; max-width: 500px;"></textarea>
+            </div>
+            <button class="m-2" style="background-color: #F8C93C; border: none; border-radius: 12px; width:500px; font-weight:bold;" onclick="cadastrarDados()">Entre em contato</button>
+        </div>
+        <div class="col-md-5 d-flex align-items-center justify-content-end flex-column" style="position: relative; top: -30px;">
+            <!-- Logo principal -->
+            <img src="assets/logoprincipal.jpg" alt="Logo" style="max-width: 40%; height: auto; margin: 70px 0 10px;">
+            <!-- Redes sociais abaixo da logo -->
+            <div class="d-flex justify-content-center" style="margin-top: 10px;">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/matematica_no_metro?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                    <img src="assets/insta150.png" alt="Instagram" style="max-width: 60px; margin: 0 10px;">
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5514997467490" target="_blank">
+                    <img src="assets/wpp150.png" alt="WhatsApp" style="max-width: 60px; margin: 0 10px;">
+                </a>
+<!-- >>>>>>> main -->
             </div>
         </div>
 
