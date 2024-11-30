@@ -1,3 +1,4 @@
+/* Estilo base para todos os elementos */
 * {
     box-sizing: border-box;
 }
@@ -60,8 +61,8 @@ body {
     transition: transform 0.2s;
     position: relative;
     z-index: 1;
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Mantém a cor do texto */
+    text-decoration: none;
+    color: inherit;
 }
 
 .quadrado:hover {
@@ -71,7 +72,6 @@ body {
 .quadrado-esquerdo,
 .quadrado-direito {
     background-color: #001585;
-
 }
 
 .quadrado-meio {
@@ -81,7 +81,7 @@ body {
 .imagem-redonda {
     width: 200px;
     height: 100px;
-    margin: 0 auto 130px; /* Ajustei a margem inferior */
+    margin: 0 auto 130px;
 }
 
 .imagem-redonda img {
@@ -90,30 +90,72 @@ body {
 }
 
 .quadrado span {
-    margin-top: 10px; /* Espaço entre a imagem e o texto */
+    margin-top: 10px;
     font-weight: bold;
     text-align: center;
 }
 
-#quadrados_saibamais{
+#quadrados_saibamais {
     text-decoration: none;
     color: rgb(215, 215, 215);
     font-weight: bolder;
 }
 
-#mapa > iframe {
+/* Estilos específicos para o mapa */
+#mapa-wrapper iframe {
+    width: 100%;
+    height: 400px; /* Altura fixa para o mapa */
+    max-width: 100%;
+    aspect-ratio: 16 / 9; /* Proporção retangular */
+    border: none;
+}
+
+#mapa-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 30px;
+}
+
+#mapa-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#mapa-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+#mapa-container .container {
+    background-color: white;
     border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
 }
 
-input, label{
-    display:block;
+@media screen and (max-width: 475px) {
+    #mapa-wrapper iframe {
+        height: 350px !important; 
+    }
+
+    #mapa-container {
+        flex-direction: column; 
+        gap: 20px;
+    }
 }
 
-.daltonismo-container {
-    margin: 20px 0;
-    text-align: center;
+@media screen and (max-width: 475px) {
+    #mapa-wrapper iframe {
+        height: 300px !important;  
+    }
 }
 
+
+/* Estilo para acessibilidade */
 body.protanopia {
     filter: url(#protanopia);
 }
@@ -122,14 +164,11 @@ body.deuteranopia {
     filter: url(#deuteranopia);
 }
 
-body,p,h1,h2,h3,h4,h5,h6,a,span {
-    font-size: 16px;
-}
-
 body.tritanopia {
     filter: url(#tritanopia);
 }
 
+/* Outras regras para opções de acessibilidade */
 .accessibility-options input {
     display: none;
 }
@@ -143,7 +182,7 @@ body.tritanopia {
     border-radius: 5px;
 }
 
-input:checked+label {
+input:checked + label {
     background-color: #003b64;
     color: white;
 }
@@ -152,7 +191,7 @@ input:checked+label {
     margin: 5px;
     padding: 10px 20px;
     background-color: #003b64;
-    color:#1286e6;
+    color: #1286e6;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -161,7 +200,6 @@ input:checked+label {
 .filter-button:hover {
     background-color: #ffcc00;
 }
-
 
 svg {
     display: none;
@@ -172,14 +210,15 @@ svg {
     top: 10px;
     right: 10px;
     z-index: 1000;
-    background-color: #1286e6; 
-    color: white; 
+    background-color: #1286e6;
+    color: white;
     border: none;
-    padding: 1px 1px; 
-    border-radius: 1px; 
-    font-size: 14px; 
+    padding: 1px 1px;
+    border-radius: 1px;
+    font-size: 14px;
     cursor: pointer;
 }
+
 #daltonismo-select:hover {
-    background-color: #0e6bb4; 
+    background-color: #0e6bb4;
 }

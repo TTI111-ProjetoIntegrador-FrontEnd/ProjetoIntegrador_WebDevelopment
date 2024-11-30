@@ -172,24 +172,43 @@
                     width="600" height="450" style="border:0; padding:30px;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 <!-- ======= -->
-        <div onload="initMap()" class="row" style="background-color: #8392ed;">
-            <h1 class="" style="font-weight: bolder;">Mapa até a estação Sacomã</h1>
-            <div id="mapa" style="display: flex; justify-content: space-between; padding: 50px; gap: 30px;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0886851798905!2d-46.60500242511699!3d-23.601152163054476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f131!3m3!1m2!1s0x94ce5b8e2bf67729%3A0xa60a4690a8cab7d2!2zU2Fjb23Dow!5e0!3m2!1spt-BR!2sbr!4v1728480422829!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                
-                <div style="display: flex; align-items: center; max-width: 400px;">
-                    <div class="container" style="border-radius: 8px; background-color: white; padding: 20px;">
-                        <h2>Local das aulas:</h2>
-                        <p>Linha 1 - Azul, Estação Ana Rosa</p>
-                        <p>Linha 2 - Verde, Estação Sacomã</p>
-                        <br>
-                        <h2>Horário das aulas:</h2>
-                        <p>Segundas-feiras, das 14h às 20h</p>
-                    </div>
-                </div>
-<!-- >>>>>>> main -->
+ 
+<!-- MAPA -->
+<div onload="initMap()" class="row" style="background-color: #8392ed; padding-bottom: 20px;">
+    <h1 class="" style="font-weight: bolder;">Mapa até a estação Sacomã</h1>
+    <div id="mapa-container" style="display: flex; justify-content: space-between; padding: 50px; gap: 30px;">
+
+        <!-- Contêiner do Mapa com limites definidos -->
+        <div id="mapa-wrapper" style="width: 100%; max-width: 900px; margin: 0 auto;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0886851798905!2d-46.60500242511699!3d-23.601152163054476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b8e2bf67729%3A0xa60a4690a8cab7d2!2zU2Fjb23Dow!5e0!3m2!1spt-BR!2sbr!4v1728480422829!5m2!1spt-BR!2sbr" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <!-- Informações adicionais ao lado do mapa -->
+        <div style="display: flex; align-items: center; max-width: 400px;">
+            <div class="container" style="border-radius: 8px; background-color: white; padding: 20px;">
+                <h2>Local das aulas:</h2>
+                <p>Linha 1 - Azul, Estação Ana Rosa</p>
+                <p>Linha 2 - Verde, Estação Sacomã</p>
+                <br>
+                <h2>Horário das aulas:</h2>
+                <p>Segundas-feiras, das 14h às 20h</p>
             </div>
         </div>
+<!-- >>>>>>> main -->
+    </div>
+</div>
+
+
+
+
         
         
         
@@ -260,8 +279,8 @@
 
 
         </script>
-
     </main>
+    
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -269,23 +288,31 @@
         </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+
+
     <footer style="background: #d9d9d9" id="rodape" class="row">
         <div class="text-center">
             <h3>Colaboradores</h3>
         </div>
         <div class="text-center p-5">
-            <img id="logo-imt" style="width: 10%; margin: 0 100px;" src="assets/logo-IMT 1.png" alt="logo_imt"
-                class="col-sm-6 img-fluid">
-            <img id="logo-eng" style="width: 4%; margin: 0 100px;" src="assets/logoIntEng.png" alt="logo_eng"
-                class="col-sm-6 img-fluid ms-5">
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-3">
+                    <img id="logo-imt" src="assets/logo-IMT 1.png" alt="logo_imt" class="img-fluid">
+                </div>
+                <div class="col-3 col-md-3">
+                    <img id="logo-eng" src="assets/logoIntEng.png" alt="logo_eng" class="img-fluid">
+                </div>
+            </div>
         </div>
         <div class="text-center">
-            <h3>Todos os Direitos Reservados &copy; </h3>
+            <h3>Todos os Direitos Reservados &copy;</h3>
         </div>
     </footer>
+    
 
 
     <script>
