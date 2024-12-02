@@ -9,6 +9,6 @@ Guilherme Monti Duarte --> 24.00888-5 --> @guimduarte - Programador Frontend: Re
 
 Mateusz Chaves Slawacki --> 24.01627-6 --> @Mattcs1206 - Programador Backend: Responsável pelo jogo, Responsável pela tela de login, realizou a documentação.
 
-Nicolas Salles --> 24.00597-4 --> @NicolasSalles24 - Programador Frontend: Responsável pela página de membros, realizou a documentação.
+Nicolas Salles --> 24.00597-4 --> @NicolasSalles24 - Programador Frontend: Responsável pela página de membros,acessibilidade e realizou a documentação.
 
 Pedro Vasconcelos Passos --> 24.00923-7 --> @PedroVasPassos - Programador Frontend (principalmente bootstrap): Responsável pela responsividade do site.
