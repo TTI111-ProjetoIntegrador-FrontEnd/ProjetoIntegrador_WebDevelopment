@@ -222,3 +222,14 @@ svg {
 #daltonismo-select:hover {
     background-color: #0e6bb4;
 }
+
+
+
+
+
+[vw-access-button] {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+}
