@@ -114,3 +114,59 @@ app.listen(3000, () => {
         console.log("erro ao conectar ao servidor", e)
     }
 })
+// afafegfegege
+const select = document.getElementById('daltonismo');
+const body = document.body;
+
+function alterarModoDaltonismo(modo) {
+    body.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
+
+    switch (modo) {
+        case 'protanopia':
+            body.classList.add('protanopia');
+            break;
+        case 'deuteranopia':
+            body.classList.add('deuteranopia');
+            break;
+        case 'tritanopia':
+            body.classList.add('tritanopia');
+            break;
+        default:
+            body.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
+            break;
+    }
+
+    localStorage.setItem('modoDaltonismo', modo);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modoPreferido = localStorage.getItem('modoDaltonismo');
+    if (modoPreferido) {
+        select.value = modoPreferido;
+        alterarModoDaltonismo(modoPreferido);
+    }
+});
+
+
+select.addEventListener('change', (event) => {
+    alterarModoDaltonismo(event.target.value);
+});
+
+//sasasasasasas
+const selectDaltonismo = document.getElementById('daltonismo');
+
+selectDaltonismo.addEventListener('change', function () {
+    const body = document.body;
+
+    body.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
+
+    if (this.value === 'protanopia') {
+        body.classList.add('protanopia');
+    } else if (this.value === 'deuteranopia') {
+        body.classList.add('deuteranopia');
+    } else if (this.value === 'tritanopia') {
+        body.classList.add('tritanopia');
+    } else {
+        body.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
+    }
+});
