@@ -13,6 +13,25 @@
 <br><br><br><br>
 <body style="background-color: #001585;">
     <header id="header" class="header">
+
+    <div class="svg1">
+        <svg width="0" height="0">
+            <defs>
+                <filter id="protanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.567,0.433,0,0,0, 0.558,0.442,0,0,0, 0,0.242,0.758,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="deuteranopia">
+                    <feColorMatrix type="matrix" values="0.625,0.375,0,0,0, 0.7,0.3,0,0,0, 0,0.3,0.7,0,0, 0,0,0,1,0" />
+                </filter>
+                <filter id="tritanopia">
+                    <feColorMatrix type="matrix"
+                        values="0.95,0.05,0,0,0, 0,0.433,0.567,0,0, 0,0.475,0.525,0,0, 0,0,0,1,0" />
+                </filter>
+            </defs>
+        </svg>
+    </div>
+
         <nav class="navbar navbar-expand-md" style="background-color: #FFFFFF">
             <img id="img-metro" src="assets/logoprincipal.jpg" alt="logo_simples"
                 class="navbar-brand justify-content-start">
@@ -22,83 +41,92 @@
             </button>
             <div class="collapse navbar-collapse" id="myNav">
                 <div class="navbar-nav ms-auto">
-                    <a class="navegacao nav-link active me-2" href="index.html">Principal</a>
-                    <a class="navegacao nav-link active me-2" href="index.html">Saiba mais</a>
-                    <a class="navegacao nav-link active me-2" href="index.html">Mapa</a>
-                    <a class="navegacao nav-link active me-2" href="index.html">Contato</a>
+                    <a class="navegacao nav-link active me-2" href="index.html#principal">Principal</a>
+                    <a class="navegacao nav-link active me-2" href="index.html#saibamais">Saiba mais</a>
+                    <a class="navegacao nav-link active me-2" href="index.html#mapa">Mapa</a>
+                    <a class="navegacao nav-link active me-2" href="index.html#contato">Contato</a>
                     <a class="navegacao nav-link active me-2" href="login.html">Login</a>
                 </div>
             </div>
+            <select id="daltonismo-select">
+                <option value="">Modo Padrão</option>
+                <option value="protanopia">Protanopia</option>
+                <option value="deuteranopia">Deuteranopia</option>
+                <option value="tritanopia">Tritanopia</option>
+            </select>
         </nav>
     </header>
 
     <main>
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+
         <div id="principal" class="row">
             <div class="main-content col-12">
                 <h2>Nossos Membros</h2>
 
-                <div class="member-card">
-                    <img src="assets/membro1.jpg" alt="Membro 1">
-                    <div>
-                        <h4>João Silva</h4>
-                        <p>Coordenador do Projeto - Responsável pela gestão e organização geral do projeto, além de ser
-                            o principal contato entre as partes envolvidas.</p>
+                <div class="member-card row">
+                    <div class="col-12 col-md-3">
+                        <img src="assets/Guilherme Sa.png" alt="Membro 1" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <h4>Guilherme Sa</h4>
+                        <p>Auxiliar do projeto</p>
                     </div>
                 </div>
 
-                <div class="member-card">
-                    <img src="assets/membro2.jpg" alt="Membro 2">
-                    <div>
-                        <h4>Ana Oliveira</h4>
-                        <p>Gestora de Recursos - Cuida da parte financeira e do levantamento de recursos necessários
-                            para a continuidade do projeto.</p>
+                <div class="member-card row">
+                    <div class="col-12 col-md-3">
+                        <img src="assets/Pedro Souza.png" alt="Membro 2" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <h4>Pedro Souza</h4>
+                        <p>Auxiliar do projeto</p>
                     </div>
                 </div>
 
-                <div class="member-card">
-                    <img src="assets/nossoMembros.png" alt="Membro 3">
-                    <div>
-                        <h4>Lucas Pereira</h4>
-                        <p>Engenheiro Voluntário - Responsável pela orientação e supervisão das aulas de matemática para
-                            os participantes do projeto.</p>
+                <div class="member-card row">
+                    <div class="col-12 col-md-3">
+                        <img src="assets/hector.png" alt="Membro 3" class="img-fluid">
                     </div>
-                </div>
-
-                <div class="member-card">
-                    <img src="assets/nossoMembros.png" alt="Membro 4">
-                    <div>
-                        <h4>Lucas Pereira</h4>
-                        <p>Engenheiro Voluntário - Responsável pela orientação e supervisão das aulas de matemática para
-                            os participantes do projeto.</p>
+                    <div class="col-12 col-md-9">
+                        <h4>Hector Gil</h4>
+                        <p>Coordenador do Projeto - Responsável pela gestão e organização geral do projeto</p>
                     </div>
                 </div>
 
                 <div class="linha-amarela"></div>
 
                 <h2>Nosso Time</h2>
-                <p style="font-size: 1.5em; color: white;">Cada membro do projeto tem uma função essencial para garantir
+                <p class="p1" style="font-size: 1.5em; color: white;">Cada membro do projeto tem uma função essencial para garantir
                     que as aulas de matemática sejam oferecidas de maneira eficaz e acessível. A colaboração entre os
                     alunos da Escola de Engenharia Mauá e os gestores do projeto é a chave para seu sucesso!</p>
             </div>
+
     </main>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
+    
+</body>
+<script>
+    function toggleMenu() {
+        var nav = document.querySelector('nav ul');
+        if (nav.style.display === 'block') {
+            nav.style.display = 'none';
+        } else {
+            nav.style.display = 'block';
+        }
+    }
+const daltonismoSelect = document.getElementById('daltonismo-select');
+</script>
 
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-
-    </script>
-
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <script src="JS/acessibilidade.js"></script>
 </html>
