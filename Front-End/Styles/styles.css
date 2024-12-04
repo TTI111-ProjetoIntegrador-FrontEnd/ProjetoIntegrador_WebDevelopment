@@ -201,14 +201,15 @@ input:checked + label {
     background-color: #ffcc00;
 }
 
-svg {
+.svg1 {
     display: none;
 }
 
 #daltonismo-select {
-    position: fixed;
-    top: 10px;
-    right: 10px;
+    position: absolute;
+    margin-left: 40%; 
+    margin-top: 0.2%;  
+    border-radius: 10%; 
     z-index: 1000;
     background-color: #1286e6;
     color: white;
@@ -221,4 +222,11 @@ svg {
 
 #daltonismo-select:hover {
     background-color: #0e6bb4;
+}
+
+@media (max-width:300px) {
+    #daltonismo-select {
+        margin-left: 30%;
+    }
+    
 }

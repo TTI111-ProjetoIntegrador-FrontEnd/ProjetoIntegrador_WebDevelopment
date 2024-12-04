@@ -1,3 +1,4 @@
+/* Resetando a caixa de modelo */
 * {
     box-sizing: border-box;
 }
@@ -39,7 +40,7 @@ body {
     height: fit-content;
 }
 
-/* A área que contém o conteúdo */
+
 .main-content {
     text-align: left;
     margin: 0 20px;
@@ -53,30 +54,36 @@ h2 {
     color: white;
     font-size: 2.5em;
     font-weight: bold;
+    text-align: center;
 }
 
-/* Cartão de membros */
+.p1 {
+    text-align: center;
+}
+
+
 .member-card {
     display: flex;
     flex-direction: row;
-    /* Alinha imagem e texto horizontalmente por padrão */
     align-items: center;
     margin-bottom: 30px;
     background-color: #2a3c8f;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; 
 }
 
-/* Imagem dos membros */
+
 .member-card img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     margin-right: 20px;
+    transition: width 0.3s ease, height 0.3s ease; 
 }
 
-/* Título e descrição dos membros */
+
 .member-card h4 {
     color: #F8C93C;
     font-size: 1.8em;
@@ -87,4 +94,101 @@ h2 {
     font-size: 1.2em;
     color: #FFF;
     margin-top: 5px;
+}
+
+/* Estilo para acessibilidade */
+body.protanopia {
+    filter: url(#protanopia);
+}
+
+body.deuteranopia {
+    filter: url(#deuteranopia);
+}
+
+body.tritanopia {
+    filter: url(#tritanopia);
+}
+
+
+.accessibility-options input {
+    display: none;
+}
+
+.accessibility-options label {
+    padding: 10px;
+    background-color: #1286e6;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input:checked + label {
+    background-color: #003b64;
+    color: white;
+}
+
+.filter-button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #003b64;
+    color: #1286e6;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-button:hover {
+    background-color: #ffcc00;
+}
+
+.svg1 {
+    display: none;
+}
+
+#daltonismo-select {
+    position: absolute;
+    margin-left: 40%; 
+    margin-top: 0.2%;  
+    border-radius: 10%; 
+    z-index: 1000;
+    background-color: #1286e6;
+    color: white;
+    border: none;
+    padding: 1px 1px;
+    border-radius: 1px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#daltonismo-select:hover {
+    background-color: #0e6bb4;
+}
+
+@media (max-width: 767px) {
+    .member-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .member-card img {
+        width: 150px; 
+        height: 150px; 
+        margin-bottom: 15px; 
+    }
+
+    .member-card h4 {
+        font-size: 1.6em; 
+    }
+
+    .member-card p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 300px) {
+    #daltonismo-select {
+        margin-left: 30%;
+    }
 }
