@@ -82,30 +82,6 @@ async function obterDados() {
     const dados = (await axios.get(URLCompleta)).data
     // console.log(dados);
     listarDados(dados)
-
-    // let principal = document.querySelector('#principal');
-    // for (let dado of dados) {
-    //     let paragrafo = document.createElement('p');
-    //     paragrafo.innerHTML = `Nome: ${dado.nome}`;
-
-    //     principal.appendChild(paragrafo);
-    // }
-
-    // let secundario = document.querySelector('#secundario');
-    // for (let dado of dados) {
-    //     let paragrafo = document.createElement('p');
-    //     paragrafo.innerHTML = `Email: ${dado.email}`;
-
-    //     secundario.appendChild(paragrafo);
-    // }
-
-    // let terciario = document.querySelector('#terciario');
-    // for (let dado of dados) {
-    //     let paragrafo = document.createElement('p');
-    //     paragrafo.innerHTML = `Mensagem de ${dado.nome}: ${dado.mensagem}`;
-
-    //     terciario.appendChild(paragrafo);
-    // }
 }
 
 async function cadastrarDados() {
@@ -123,9 +99,9 @@ async function cadastrarDados() {
     //envia os dados coletador pro back
     const dados = (await axios.post(URLCompleta, {nome, email, mensagem})).data
     //limpa os campos que o usuário digitou
-    nome = ''
-    email = ''
-    mensagem = ''
+    nomeInput.value = '';
+    emailInput.value = '';
+    mensagemInput.value = '';
 
     let principal = document.querySelector('#principal');
     // principal.innerHTML = '';

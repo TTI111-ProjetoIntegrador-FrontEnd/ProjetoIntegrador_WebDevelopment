@@ -18,6 +18,19 @@ body {
     margin-top: 60px;
 }
 
+.botao {
+    background-color: #F8C93C;
+    border: none;
+    border-radius: 12px;
+    max-width:500px;
+    width: 100%;
+    font-weight:bold;
+}
+
+.botao:hover {
+    background-color: #b89300;
+}
+
 #img-metro {
     height: 80px;
     margin-left: 10px;
