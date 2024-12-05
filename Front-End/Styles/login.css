@@ -7,6 +7,18 @@ body {
     background-color: #001585;
 
 }
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#img-metro {
+    height: 80px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
 
 .page {
     display: flex;
